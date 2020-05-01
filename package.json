@@ -27,8 +27,6 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.9.10",
     "querystring": "~0.2.0",
-    "react-bootstrap": "^1.0.1",
-    "react-player": "^2.0.1",
     "request": "~2.83.0"
   }
 }
