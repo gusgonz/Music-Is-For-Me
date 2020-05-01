@@ -1,14 +1,92 @@
-import React from "react";
-import MusicContainer from "../../components/ReactPlayer/MusicContainer";
-import "./style.css";
+import React, { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import MusicContainer from "../../components/MusicContainer";
+import API from "../../utils/API";
 
 
-function Posts(){
-return(
-<div>
 
-</div>
-);
+
+
+function Posts() {
+
+    const [allPosts, setAllPosts] = useState([]);
+
+    const [{currPosts,search,targetType}, setCurrPosts] = useState({ currPosts: [], search: "", targetType:""});
+
+    React.useEffect(() => {
+    setAllPosts(API.getPosts());
+     setCurrPosts({
+         search: "",
+         targetType: "Teacher",
+         currPosts: allPosts.filter(post => post.type==="Teacher")
+     })
+    },[allPosts]);
+
+    function handleTypeChange({target}){
+        let newArr = allPosts.filter(post => {
+            console.log(search, " ", post.name);
+            return post.type===target.value && post.name.includes(search);
+        })
+        setCurrPosts({
+            currPosts: newArr,
+            targetType:target.value,
+            search: search
+        });
+    }
+
+    function handleSearchChange({target}){
+        let newArr = allPosts.filter(post => {
+            console.log(search, " ", post.name);
+            return post.type===target.value && post.name.includes(search);
+        });
+
+        setCurrPosts({
+            currPosts: newArr,
+            targetType:targetType,
+            search: target.value
+        });
+    }
+
+    return (
+        <Container>
+            <Row name="SearchRow">
+            <Form>
+                <Form.Row>
+                <Col>
+                <Form.Group>
+                    <Form.Control type="search" placeholder="Search" onChange={handleSearchChange}></Form.Control>
+                </Form.Group>
+                </Col>
+                <Col>
+                    <Form.Control as="select" onChange={handleTypeChange}>
+                        <option>Teacher</option>
+                        <option>Student</option>
+                    </Form.Control>
+                </Col>
+                </Form.Row>
+            </Form>
+            </Row>
+            <Row name="ContentRow">
+                <Col>
+                {currPosts.map((p,index)=>{
+                    return <MusicContainer
+                    title={p.title}
+                    url={p.url}
+                    name={p.name}
+                    userID={p.userID}
+                    email={p.email}
+                    type={p.type}
+                    key={index}
+                    />
+                })}
+                </Col>
+
+            </Row>
+        </Container>
+    )
 }
 
 export default Posts;

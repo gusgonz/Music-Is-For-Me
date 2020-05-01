@@ -15,6 +15,7 @@ function MusicContainer(props) {
           <h2 className="mt-0">{props.title}</h2> 
           <h4>Title: {props.name}</h4>
           <span>Contact:</span><a href={"/" + props.userID}>{props.email}</a>
+          <p>{props.type}</p>
         </div>
 
         <div className="col-4">
