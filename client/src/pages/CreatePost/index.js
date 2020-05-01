@@ -5,8 +5,11 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import MusicContainer from "../../components/MusicContainer";
 import API from "../../utils/API";
-import Button from 'react-bootstrap/Button'
-import DropdownButton from 'react-bootstrap/DropdownButton'
+import Button from 'react-bootstrap/Button';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import DropDownMenu from "../../components/DropdownMenu";
+import TeacherStudentButtons from "../../components/TeacherStudentButtons";
+
 
 
 function CreatePost() {
@@ -18,6 +21,9 @@ function CreatePost() {
         <div>
         <p>asdfasddf</p>        
         <Button variant="primary">Primary</Button>{' '}
+        <DropDownMenu />
+        <TeacherStudentButtons />
+
         </div>
     )
 }
