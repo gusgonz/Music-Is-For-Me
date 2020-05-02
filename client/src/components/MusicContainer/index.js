@@ -1,6 +1,8 @@
 import React from "react";
 import MusicPlayer from "../MusicPlayer"
-
+import Media from "react-bootstrap/Media";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 
 
@@ -8,24 +10,24 @@ import MusicPlayer from "../MusicPlayer"
 function MusicContainer(props) {
 
   return (
-    <div className="media" style={{border:"2px solid blue"}}>
-      <div className="media-body">
-        <div className="row">
-        <div className="col-8">
-          <h2 className="mt-0">{props.title}</h2> 
+    
+      <Media style={{border:"2px solid blue"}}>
+        <Media.Body>
+    <Row>
+      <Col>
+      <h2 className="mt-0">{props.title}</h2> 
           <h4>Title: {props.name}</h4>
           <span>Contact:</span><a href={"/" + props.userID}>{props.email}</a>
           <p>{props.type}</p>
-        </div>
-
-        <div className="col-4">
-          <MusicPlayer
+      </Col>
+      <Col lg={5} md={5} sm={5} xs={5}>
+      <MusicPlayer
             url={props.url}
           />
-        </div>
-        </div>
-      </div>
-    </div>
+      </Col>
+    </Row>
+        </Media.Body>
+      </Media>
   );
 }
 

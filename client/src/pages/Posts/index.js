@@ -40,7 +40,8 @@ function Posts() {
     function handleSearchChange({target}){
         let newArr = allPosts.filter(post => {
             console.log(search, " ", post.name);
-            return post.type===target.value && post.name.includes(search);
+            console.log(post.type, " ", targetType)
+            return post.type===targetType && post.name.includes(target.value);
         });
 
         setCurrPosts({
