@@ -17,11 +17,12 @@ import "./style.css";
 function CreatePost() {
     const [Instruments, SetInstruments] = useState([]);
     const [TeacherOrStudent, SetStateOfTeacherOrStudent] = useState([]);
-    const [count, setCount] = useState(0);
+    // const [TeacherOrStudent, SetStateOfTeacherOrStudent] = useState([]);
+    
 
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
-        document.title = `You clicked ${count} times`;
+        // document.title = `You clicked ${count} times`;
       });
 
 
@@ -31,9 +32,9 @@ function CreatePost() {
               
         <DropDownMenu />
         <TeacherStudentButtons />
-        <Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
+        {/* <Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
             Submit
-        </Button>{' '}
+        </Button>{' '} */}
 
         </div>
     )
