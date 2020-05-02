@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import DropDownMenu from "../../components/DropdownMenu";
 import TeacherStudentButtons from "../../components/TeacherStudentButtons";
+import "./style.css";
 
 
 
@@ -16,14 +17,23 @@ import TeacherStudentButtons from "../../components/TeacherStudentButtons";
 function CreatePost() {
     const [Instruments, SetInstruments] = useState([]);
     const [TeacherOrStudent, SetStateOfTeacherOrStudent] = useState([]);
+    const [count, setCount] = useState(0);
+
+    // Similar to componentDidMount and componentDidUpdate:
+    useEffect(() => {
+        document.title = `You clicked ${count} times`;
+      });
+
 
 
     return(
         <div>
-        <p>asdfasddf</p>        
-        <Button variant="primary">Primary</Button>{' '}
+              
         <DropDownMenu />
         <TeacherStudentButtons />
+        <Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
+            Submit
+        </Button>{' '}
 
         </div>
     )
