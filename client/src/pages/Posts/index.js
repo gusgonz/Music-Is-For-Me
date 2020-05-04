@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import MusicContainer from "../../components/MusicContainer";
 import API from "../../utils/API";
-
+import UserContext from "../../utils/UserContext";
 
 
 
@@ -15,8 +15,9 @@ function Posts() {
     const [allPosts, setAllPosts] = useState([]);
 
     const [{currPosts,search,targetType}, setCurrPosts] = useState({ currPosts: [], search: "", targetType:""});
-
-    React.useEffect(() => {
+    const userState = useContext(UserContext);
+    useEffect(() => {
+        console.log(userState);
     setAllPosts(API.getPosts());
      setCurrPosts({
          search: "",
