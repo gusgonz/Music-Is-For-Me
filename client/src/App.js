@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import CreatePost from "./pages/CreatePost";
 import ProfilePage from "./pages/ProfilePage";
+import Login from './pages/LoginPage';
 
 function App() {
   const [currUser, setCurrUser] = useState({
