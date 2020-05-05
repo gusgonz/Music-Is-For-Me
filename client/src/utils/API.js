@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 const posts = [
     {
         "title": "Garrett Reichman & The Funky Bunch",
@@ -44,5 +46,11 @@ const posts = [
 export default {
     getPosts : function(){
         return posts;
+    },
+    registerLogin : function(user){
+        return axios.post("/auth/register_login",{user})
+    },
+    logout : function (){
+        return axios.get("/auth/logout");
     }
 }
