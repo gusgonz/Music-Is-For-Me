@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// const spotifyDataSchema = new Schema({
+
+// });
+
 const userSchema = new Schema({
     firstName: {
         type: String
@@ -14,15 +18,17 @@ const userSchema = new Schema({
         unique: true
     },
     password: {
-        type: String
+        type: String,
+        required: true
     },
-    third_party_auth: [ThirdPartyProviderSchema],
     date: {
         type: Date,
         default: Date.now
-    }
-},
-    { strict: false }
+    },
+    // spotify_data: {
+
+    // }
+}
 );
 
 userSchema.virtual('firstname').get(function () { return this.firstName.charAt(0).toUpperCase() + this.firstName.splice(1) });
