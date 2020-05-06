@@ -17,19 +17,19 @@ function Posts() {
     const [{currPosts,search,targetType}, setCurrPosts] = useState({ currPosts: [], search: "", targetType:""});
     const userState = useContext(UserContext);
     useEffect(() => {
-        console.log(userState);
+        // console.log(userState);
     setAllPosts(API.getPosts());
      setCurrPosts({
          search: "",
          targetType: "Teacher",
-         currPosts: allPosts.filter(post => post.type==="Teacher")
+         currPosts: allPosts.filter(post => post.title==="Teacher")
      })
     },[allPosts]);
 
     function handleTypeChange({target}){
         let newArr = allPosts.filter(post => {
-            console.log(search, " ", post.name);
-            return post.type===target.value && post.name.includes(search);
+            // console.log(search, " ", post.name);
+            return post.title===target.value && post.role.includes(search);
         })
         setCurrPosts({
             currPosts: newArr,
@@ -40,9 +40,9 @@ function Posts() {
 
     function handleSearchChange({target}){
         let newArr = allPosts.filter(post => {
-            console.log(search, " ", post.name);
-            console.log(post.type, " ", targetType)
-            return post.type===targetType && post.name.includes(target.value);
+            // console.log(search, " ", post.name);
+            // console.log(post.type, " ", targetType)
+            return post.title===targetType && post.role.includes(target.value);
         });
 
         setCurrPosts({
@@ -76,11 +76,13 @@ function Posts() {
                 {currPosts.map((p,index)=>{
                     return <MusicContainer
                     title={p.title}
-                    url={p.url}
+                    video={p.video}
                     name={p.name}
-                    userID={p.userID}
+                    author_id={p.author_id}
                     email={p.email}
-                    type={p.type}
+                    phone={p.phone}
+                    role={p.role}
+                    description={p.description}
                     key={index}
                     />
                 })}
