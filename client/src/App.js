@@ -18,16 +18,17 @@ function App() {
     bio: "this is a test bio",
   });
   return (
-    <Router>
-      <div className="App">
-        <Nav></Nav>
-        <Switch>
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/createpost" component={CreatePost} />
-          <Route path="/" component={Posts} />
-        </Switch>
-      </div>
-    </Router>
+    <Login />
+    // <Router>
+    //   <div className="App">
+    //     <Nav></Nav>
+    //     <Switch>
+    //       <Route path="/profile" component={ProfilePage} />
+    //       <Route path="/createpost" component={CreatePost} />
+    //       <Route path="/" component={Posts} />
+    //     </Switch>
+    //   </div>
+    // </Router>
   );
 }
 
