@@ -18,17 +18,18 @@ function App() {
     bio: "this is a test bio",
   });
   return (
-    <Login />
-    // <Router>
-    //   <div className="App">
-    //     <Nav></Nav>
-    //     <Switch>
-    //       <Route path="/profile" component={ProfilePage} />
-    //       <Route path="/createpost" component={CreatePost} />
-    //       <Route path="/" component={Posts} />
-    //     </Switch>
-    //   </div>
-    // </Router>
+    
+    <Router>
+      <div className="App">
+        <Nav></Nav>
+        <Switch>
+          <Route path="/profile" component={ProfilePage} />
+          <Route path="/createpost" component={CreatePost} />
+          <Route path="/posts" component={Posts} />
+          <Route path="/" component={Login}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
