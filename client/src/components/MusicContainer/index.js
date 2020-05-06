@@ -10,24 +10,26 @@ import Col from "react-bootstrap/Col";
 function MusicContainer(props) {
 
   return (
-    
-      <Media style={{border:"2px solid blue"}}>
-        <Media.Body>
-    <Row>
-      <Col>
-      <h2 className="mt-0">{props.title}</h2> 
-          <h4>Title: {props.name}</h4>
-          <span>Contact:</span><a href={"/" + props.userID}>{props.email}</a>
-          <p>{props.type}</p>
-      </Col>
-      <Col lg={5} md={5} sm={5} xs={5}>
-      <MusicPlayer
-            url={props.url}
-          />
-      </Col>
-    </Row>
-        </Media.Body>
-      </Media>
+
+    <Media style={{ border: "2px solid blue" }}>
+      <Media.Body>
+        <Row>
+          <Col>
+            <h2 className="mt-0"><a href={"/" + props.userID}>{props.name}</a></h2>
+            <h4>Role: {props.role}</h4>
+            <span>Email:</span><p>{props.email}</p>
+            <span>Phone:</span><p>{props.phone}</p>
+            <p>{props.title} #remove later#</p>
+            <p>{props.description}</p>
+          </Col>
+          <Col lg={5} md={5} sm={5} xs={5}>
+            <MusicPlayer
+              url={props.video}
+            />
+          </Col>
+        </Row>
+      </Media.Body>
+    </Media>
   );
 }
 

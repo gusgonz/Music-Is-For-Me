@@ -54,13 +54,13 @@ const posts = [
 ]
 
 export default {
-    getPosts : function(){
+    getPosts: function () {
         return posts;
     },
-    registerLogin : function(user){
-        return axios.post("/auth/register_login",{user})
+    registerLogin: function (user) {
+        return axios.post("/auth/register_login", user)
     },
-    logout : function (){
+    logout: function () {
         return axios.get("/auth/logout");
     }
 }
