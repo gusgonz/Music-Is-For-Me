@@ -9,12 +9,12 @@ const navStyle = {
 function Nav() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <Link to="/">
+        <Link to="/posts">
         <h1 className="navbar-brand">
           Music Is For Me
         </h1>
         </Link>
-        <Link to="/">
+        <Link to="/posts">
         <h3 className = "nav-item" style={navStyle}>Posts</h3>
         </Link>
         <Link to="createpost">
