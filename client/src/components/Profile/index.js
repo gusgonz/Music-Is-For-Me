@@ -1,20 +1,35 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-// import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
-// import Row from "react-bootstrap/Row";
 
 function Profile() {
   return (
     <Container>
       <Card style={{ width: "18rem" }}>
-        <Image src="holder.js/171x180" roundedCircle />
+        <Image src="https://www.placecage.com/c/200/300" roundedCircle />
         <Card.Body>
-          <Card.Title>User Name</Card.Title>
-          <Card.Text>something about the user bio</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Title>
+            <h1 className="Name">Nicolas Cage</h1>
+          </Card.Title>
+
+          <Card.Text>
+            <a>email: test@yahoo.com</a>
+          </Card.Text>
+
+          <Card.Text>
+            <p className="Bio">
+              Nicolas Cage was born Nicolas Kim Coppola on January 7, 1964, in
+              Long Beach, California, to choreographer Joy Vogelsang and
+              literature professor August Coppola. ... He chose the name Cage as
+              a tribute to comic-book superhero Luke Cage. Cage is known for his
+              edgy, intense personality and for his passion for method acting.
+            </p>
+          </Card.Text>
+          <Button variant="primary" href="https://www.spotify.com/">
+            Spotify
+          </Button>
         </Card.Body>
       </Card>
     </Container>
