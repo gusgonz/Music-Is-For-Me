@@ -20,4 +20,11 @@ router.post("/register_login", (req, res, next) => {
     })(req, res, next);
 });
 
+router.get("/logout", (req, res) => {
+    req.logout();
+    console.log("logged out");
+    res.status(200).json({ success: `logged out ${user.id}` });
+    // res.redirect("/");
+});
+
 module.exports = router;

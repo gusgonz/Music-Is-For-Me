@@ -2,28 +2,29 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-    name : {
+    name: {
         type: String
     },
-    email : {
+    email: {
         type: String
     },
-    phone : {
+    phone: {
         type: String
     },
-    authorID : {
-        type: ObjectId
+    author_id: {
+        type: Schema.Types.ObjectId,
+        ref: "Author"
     },
-    title : {
+    title: {
         type: String
     },
-    role : {
+    role: {
         type: String
     },
-    video : {
+    video: {
         type: String
     },
-    description : {
+    description: {
         type: String
     }
 });
