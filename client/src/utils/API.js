@@ -2,44 +2,54 @@ const axios = require("axios");
 
 const posts = [
     {
-        "title": "Garrett Reichman & The Funky Bunch",
-        "name": "Vocal Coach",
-        "url": "http://www.youtube.com/watch?v=99j0zLuNhi8",
-        "userID": 69,
+        "name": "Garrett Reichman & The Funky Bunch",
+        "role": "Vocal Coach",
+        "video": "http://www.youtube.com/watch?v=99j0zLuNhi8",
+        "author_id": 69,
         "email": "gsreichman@gmail.com",
-        "type": "Teacher"
+        "title": "Teacher",
+        "description" : "sample description",
+        "phone": "867-53-09"
     },
     {
-        "title" : "gsr",
-        "name" : "guitar",
-        "url" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
-        "userID" : 1337,
+        "name" : "gsr",
+        "role" : "guitar",
+        "video" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
+        "author_id" : 1337,
         "email" : "gsreichman@gmail.com",
-        "type" : "Student"
+        "title" : "Student",
+        "description" : "sample description",
+        "phone": "867-53-09"
     },
     {
-        "title" : "rsg",
-        "name" : "ukelele, Guitar",
-        "url" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
-        "userID" : 12,
+        "name" : "rsg",
+        "role" : "ukelele, Guitar",
+        "video" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
+        "author_id" : 12,
         "email" : "gsreichman@gmail.com",
-        "type" : "Teacher"
+        "title" : "Teacher",
+        "description" : "sample description",
+        "phone": "867-53-09"
     },
     {
-        "title" : "test",
-        "name" : " vocals",
-        "url" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
-        "userID" : 96,
+        "name" : "test",
+        "role" : " vocals",
+        "video" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
+        "author_id" : 96,
         "email" : "gsreichman@gmail.com",
-        "type" : "Student"
+        "title" : "Student",
+        "description" : "sample description",
+        "phone": "867-53-09"
     },
     {
-        "title" : "duke nukem",
-        "name" : "drums",
-        "url" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
-        "userID" : 2,
+        "name" : "duke nukem",
+        "role" : "drums",
+        "video" : "http://www.youtube.com/watch?v=99j0zLuNhi8",
+        "author_id" : 2,
         "email" : "gsreichman@gmail.com",
-        "type" : "Teacher"
+        "title" : "Teacher",
+        "description" : "sample description",
+        "phone": "867-53-09"
     }
 ]
 
