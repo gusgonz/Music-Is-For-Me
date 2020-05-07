@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DropDownMenu from "../../components/DropdownMenu";
 import TeacherStudentButtons from "../../components/TeacherStudentButtons";
+import SubmitButtonCreatePost from '../../components/SubmitButtonCreatePost';
+import Button from 'react-bootstrap/Button'
 import "./style.css";
 
 
@@ -10,6 +12,9 @@ import "./style.css";
 function CreatePost() {
     // const [Instruments, SetInstruments] = useState([]);
     const [TeacherOrStudent, SetStateOfTeacherOrStudent] = useState("");
+    // const TeacherOrStudent = useRef();
+    // const InstrumentPicked = useRef();
+    // const Description = useRef();
     // const [UserDescription, SetUserDescription] = useState([]);
     
 
@@ -26,6 +31,7 @@ function CreatePost() {
               
         <DropDownMenu />
         <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/>
+        <SubmitButtonCreatePost />
         {/* <Button
 Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
             Submit
