@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import DropDownMenu from "../../components/DropdownMenu";
 import TeacherStudentButtons from "../../components/TeacherStudentButtons";
 import SubmitButtonCreatePost from '../../components/SubmitButtonCreatePost';
-import Button from 'react-bootstrap/Button'
+import ExampleSongCreatePost from '../../components/ExampleSongCreatePost';
+import Button from 'react-bootstrap/Button';
 import "./style.css";
 
 
@@ -32,6 +33,7 @@ function CreatePost() {
         <DropDownMenu />
         <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/>
         <SubmitButtonCreatePost />
+        <ExampleSongCreatePost />
         {/* <Button
 Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
             Submit
