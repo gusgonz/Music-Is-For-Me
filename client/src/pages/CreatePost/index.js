@@ -3,7 +3,7 @@ import DropDownMenu from "../../components/DropdownMenu";
 import TeacherStudentButtons from "../../components/TeacherStudentButtons";
 import SubmitButtonCreatePost from '../../components/SubmitButtonCreatePost';
 import ExampleSongCreatePost from '../../components/ExampleSongCreatePost';
-import Button from 'react-bootstrap/Button';
+import DescriptionCreatePost from '../../components/DescriptionCreatePost';
 import "./style.css";
 
 
@@ -32,8 +32,9 @@ function CreatePost() {
               
         <DropDownMenu />
         <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/>
-        <SubmitButtonCreatePost />
+        <DescriptionCreatePost />
         <ExampleSongCreatePost />
+        <SubmitButtonCreatePost />
         {/* <Button
 Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
             Submit

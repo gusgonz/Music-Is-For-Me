@@ -31,7 +31,7 @@ function HandleTeacherStudentClick({target}) {
       Student
     </ToggleButton>
   </ButtonGroup>
-  <textarea className="textAreaClass" name="" id="" cols="30" rows="10">Description of post</textarea>
+  {/* <textarea className="textAreaClass" name="" id="" cols="30" rows="10">Description of post</textarea> */}
 </>
     )
 }
