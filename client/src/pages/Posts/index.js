@@ -16,15 +16,19 @@ function Posts() {
 
     const [{currPosts,search,targetType}, setCurrPosts] = useState({ currPosts: [], search: "", targetType:""});
     const userState = useContext(UserContext);
+
     useEffect(() => {
-        // console.log(userState);
-    setAllPosts(API.getPosts());
-     setCurrPosts({
-         search: "",
-         targetType: "Teacher",
-         currPosts: allPosts.filter(post => post.title==="Teacher")
-     })
-    },[allPosts]);
+        console.log("test");
+    API.getPosts().then(results =>{
+
+        setAllPosts(results.data);
+         setCurrPosts({
+             search: "",
+             targetType: "Teacher",
+             currPosts: allPosts.filter(post => post.title==="Teacher")
+         })
+    })
+    },[]);
 
     function handleTypeChange({target}){
         let newArr = allPosts.filter(post => {
