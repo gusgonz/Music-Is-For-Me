@@ -3,12 +3,13 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
+import "./style.css";
 
 function Profile() {
   return (
     <Container>
-      <Card style={{ width: "18rem" }}>
-        <Image src="https://www.placecage.com/c/200/300" roundedCircle />
+      <Card style={{ width: "500px", height: "600px" }}>
+        <Image src="https://www.placecage.com/200/200" rounded />
         <Card.Body>
           <Card.Title>
             <h1 className="Name">Nicolas Cage</h1>
