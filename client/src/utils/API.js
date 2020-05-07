@@ -55,7 +55,8 @@ const posts = [
 
 export default {
     getPosts: function () {
-        return posts;
+        return axios.get("/api/posts");
+        // return posts;
     },
     registerLogin: function (user) {
         return axios.post("/auth/register_login", user)
