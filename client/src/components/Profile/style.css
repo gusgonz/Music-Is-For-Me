@@ -1,3 +1,19 @@
 body {
   background-color: black;
 }
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  background-color: slateblue;
+  border-radius: 20px;
+  border: 10px solid black;
+}
+
+.container {
+  width: 85%;
+  background-color: slateblue;
+  border-radius: 20px;
+  border:5px solid slateblue;
+}
+
