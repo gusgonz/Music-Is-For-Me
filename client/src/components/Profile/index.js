@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 
-import "./style.css";
+import "./styleProfile.css";
 
 function Profile() {
   return (
@@ -34,7 +34,7 @@ function Profile() {
     </p>
         </Media.Body>
       </Media>
-      <Button variant="primary" href="https://www.spotify.com/">
+      <Button variant="success" href="https://www.spotify.com/">
         Spotify
           </Button>
 
