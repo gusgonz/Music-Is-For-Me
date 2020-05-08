@@ -9,18 +9,12 @@ import ProfilePage from "./pages/ProfilePage";
 import Login from './pages/LoginPage';
 
 function App() {
-  const [currUser, setCurrUser] = useState({
-    name: "Garrett",
-    email: "Gsreichman@gmail.com",
-    phone: "867-53-09",
-    ID: 1337,
-    pic: "https://www.gstatic.com/tv/thumb/persons/258/258_v9_bb.jpg",
-    bio: "this is a test bio",
-  });
+  const [currUser, setCurrUser] = useState({});
   return (
     
     <Router>
       <div className="App">
+      <UserContext.Provider value={{currUser, setCurrUser}}>
         <Nav></Nav>
         <Switch>
           <Route path="/profile" component={ProfilePage} />
@@ -28,6 +22,7 @@ function App() {
           <Route path="/posts" component={Posts} />
           <Route path="/" component={Login}/>
         </Switch>
+        </UserContext.Provider>
       </div>
     </Router>
   );
