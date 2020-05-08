@@ -19,7 +19,7 @@ function Posts() {
 
     useEffect(() => {
         loadPosts();
-        console.log(userState.currUser)
+        console.log(userState)
     },[]);
 
     function loadPosts(){
