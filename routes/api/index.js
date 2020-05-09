@@ -10,6 +10,7 @@ router.route("/posts")
 // route: "/api/users/:id"
 router.route("/users/:id")
     .get(userController.findByID)
+    .put(userController.addSpotifyData);
 
 
 module.exports = router;
