@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,14 +9,12 @@ import UserContext from "../../utils/UserContext";
 
 
 
-
 function Posts() {
 
     const [allPosts, setAllPosts] = useState([]);
-
+    const testRef = useRef();
     const [{currPosts,search,targetType}, setCurrPosts] = useState({ currPosts: [], search: "", targetType:""});
     const userState = useContext(UserContext);
-
     useEffect(() => {
         loadPosts();
         console.log(userState)
@@ -34,6 +32,7 @@ function Posts() {
     }
 
     function handleTypeChange({target}){
+        console.log(testRef.current.value)
         let newArr = allPosts.filter(post => {
             // console.log(search, " ", post.name);
             return post.title===target.value && post.role.includes(search);
@@ -68,7 +67,7 @@ function Posts() {
                 </Form.Group>
                 </Col>
                 <Col>
-                    <Form.Control as="select" onChange={handleTypeChange}>
+                    <Form.Control as="select" onChange={handleTypeChange} ref={testRef}>
                         <option>Select..</option>
                         <option>Teacher</option>
                         <option>Student</option>

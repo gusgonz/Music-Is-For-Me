@@ -17,7 +17,7 @@ function App() {
       <UserContext.Provider value={{currUser, setCurrUser}}>
         <Nav></Nav>
         <Switch>
-          <Route path="/profile" component={ProfilePage} />
+          <Route path="/profile/:id" component={ProfilePage} />
           <Route path="/createpost" component={CreatePost} />
           <Route path="/posts" component={Posts} />
           <Route path="/" component={Login}/>

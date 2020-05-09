@@ -1,12 +1,28 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Media from "react-bootstrap/Media";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import {useParams} from "react-router-dom";
+import API from "../../utils/API";
 
-import "./style.css";
+import "./styleProfile.css";
 
 function Profile() {
+  const {id} = useParams();
+  const [currProfile, setCurrProfile] = useState({});
+
+  function loadUser(){
+    API.getUser(id).then(results =>{
+      setCurrProfile(results.data);
+      console.log(results.data);
+    });
+  }
+
+    useEffect(()=>{
+      loadUser();
+    },[]);
+
   return (
     <Container>
 
@@ -34,7 +50,7 @@ function Profile() {
     </p>
         </Media.Body>
       </Media>
-      <Button variant="primary" href="https://www.spotify.com/">
+      <Button variant="success" href="https://www.spotify.com/">
         Spotify
           </Button>
 

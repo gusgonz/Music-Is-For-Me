@@ -2,12 +2,14 @@ body {
   background-color: black;
 }
 
-
-
 .container {
   margin-top: 40px;
-  background-color: slateblue;
+  background-color:rgb(47, 25, 190);
   border-radius: 20px;
-  border:5px solid slateblue;
+  border:5px solid rgb(47, 25, 190);
+  color: silver;
 }
+
+
+
 

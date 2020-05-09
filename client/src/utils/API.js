@@ -18,5 +18,9 @@ export default {
     },
     saveSpotifyData: function (id, data) {
         return axios.put("/api/users/" + id, data);
+    },
+    getUser : function(id){
+        return axios.get("/api/users/"+id);
+
     }
 }
