@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import {useParams} from "react-router-dom";
 import API from "../../utils/API";
+import ConnectToSpotify from "../../components/ConnectToSpotify";
 
 import "./styleProfile.css";
 
@@ -50,9 +51,7 @@ function Profile() {
     </p>
         </Media.Body>
       </Media>
-      <Button variant="success" href="https://www.spotify.com/">
-        Spotify
-          </Button>
+      <ConnectToSpotify userID = {id} hasSpotify={currProfile.has_spotify} changeProfile={setCurrProfile}/>
 
     </Container >
   );
