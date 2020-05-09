@@ -9,7 +9,7 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/music_is_for
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const startSpotifyServer = require("./spotify-auth/spotify-server");
+// const startSpotifyServer = require("./spotify-auth/spotify-server");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -47,10 +47,10 @@ app.use(
 
 
 
+// startSpotifyServer(app);
 
 // Start the API server
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
-startSpotifyServer();
