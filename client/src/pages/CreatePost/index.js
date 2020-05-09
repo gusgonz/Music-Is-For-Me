@@ -1,9 +1,4 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import DropDownMenu from "../../components/DropdownMenu";
-import TeacherStudentButtons from "../../components/TeacherStudentButtons";
-import SubmitButtonCreatePost from '../../components/SubmitButtonCreatePost';
-import ExampleSongCreatePost from '../../components/ExampleSongCreatePost';
-import DescriptionCreatePost from '../../components/DescriptionCreatePost';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from "react-bootstrap/Dropdown";
 import FormControl from "react-bootstrap/FormControl";
