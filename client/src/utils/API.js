@@ -10,5 +10,8 @@ export default {
     },
     logout: function () {
         return axios.get("/auth/logout");
+    },
+    getUser : function(id){
+        return axios.get("/api/users/"+id);
     }
 }
