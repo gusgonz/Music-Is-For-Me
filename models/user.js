@@ -1,9 +1,20 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// const spotifyDataSchema = new Schema({
-
-// });
+const spotifyDataSchema = new Schema({
+    image_url: {
+        type: String
+    },
+    spotify_url: {
+        type: String
+    },
+    display_name: {
+        type: String
+    },
+    country: {
+        type: String
+    }
+});
 
 const userSchema = new Schema({
     firstName: {
@@ -25,9 +36,11 @@ const userSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    // spotify_data: {
-
-    // }
+    spotify_data: spotifyDataSchema,
+    has_spotify: {
+        type: Boolean,
+        default: false
+    }
 }
 );
 
