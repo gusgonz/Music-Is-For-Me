@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import DropDownMenu from "../../components/DropdownMenu";
 import TeacherStudentButtons from "../../components/TeacherStudentButtons";
 import SubmitButtonCreatePost from '../../components/SubmitButtonCreatePost';
@@ -10,8 +10,7 @@ import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Button from "react-bootstrap/Button";
-
-// import UserContext from "../../utils/UserContext";
+import UserContext from "../../utils/UserContext";
 import "./style.css";
 
 
@@ -26,7 +25,7 @@ function CreatePost() {
     
     
     // Enable below line to enable user context along with importing
-    // const userState = useContext(UserContext);
+    const userState = useContext(UserContext);
     // const [Instruments, SetInstruments] = useState([]);
     // const [UserDescription, SetUserDescription] = useState("");
     // const [UserDescription, SetUserDescription] = useState("");
@@ -53,10 +52,12 @@ function CreatePost() {
 
             //below creates object of all the user inputs
             let CreatePostObject = {
-                teacherOrStudent: teacherOrStudent.current.value,
-                instrumentPicked: instrumentPicked.current.value,
+                title: teacherOrStudent.current.value,
+                role: instrumentPicked.current.value,
                 description: description.current.value,
-                urlYoutube: urlYoutube.current.value
+                video: urlYoutube.current.value,
+                author_id: userState.currUser._id,
+                email: userState.currUser.email
             }
             console.log(CreatePostObject);
 
