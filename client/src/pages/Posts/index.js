@@ -18,17 +18,20 @@ function Posts() {
     const userState = useContext(UserContext);
 
     useEffect(() => {
-        console.log("test");
-    API.getPosts().then(results =>{
-
-        setAllPosts(results.data);
-         setCurrPosts({
-             search: "",
-             targetType: "Teacher",
-             currPosts: allPosts.filter(post => post.title==="Teacher")
-         })
-    })
+        loadPosts();
+        console.log(userState)
     },[]);
+
+    function loadPosts(){
+        API.getPosts().then(results =>{
+            setAllPosts(results.data);
+             setCurrPosts({
+                 search: "",
+                 targetType: "",
+                 currPosts:[]
+             });
+        })
+    }
 
     function handleTypeChange({target}){
         let newArr = allPosts.filter(post => {
@@ -44,8 +47,6 @@ function Posts() {
 
     function handleSearchChange({target}){
         let newArr = allPosts.filter(post => {
-            // console.log(search, " ", post.name);
-            // console.log(post.type, " ", targetType)
             return post.title===targetType && post.role.includes(target.value);
         });
 
@@ -68,6 +69,7 @@ function Posts() {
                 </Col>
                 <Col>
                     <Form.Control as="select" onChange={handleTypeChange}>
+                        <option>Select..</option>
                         <option>Teacher</option>
                         <option>Student</option>
                     </Form.Control>
