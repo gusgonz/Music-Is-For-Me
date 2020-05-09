@@ -46,21 +46,28 @@ function CreatePost() {
     //     event.preventDefault();
     //     SetInstrument(instrumentRef);
         function createPostInfo() {
-            console.log(teacherOrStudent.current.value);
-            console.log(instrumentPicked.current.value);
-            console.log(description.current.value);
-            console.log(urlYoutube.current.value);
+            // console.log(teacherOrStudent.current.value);
+            // console.log(instrumentPicked.current.value);
+            // console.log(description.current.value);
+            // console.log(urlYoutube.current.value);
 
+            //below creates object of all the user inputs
+            let CreatePostObject = {
+                teacherOrStudent: teacherOrStudent.current.value,
+                instrumentPicked: instrumentPicked.current.value,
+                description: description.current.value,
+                urlYoutube: urlYoutube.current.value
+            }
+            console.log(CreatePostObject);
 
-
-
+            }
             // SetStateOfTeacherOrStudent(Instrument);
             // Instrument: instrumentPicked.current.value,
             // description: description.current.value,
             // teacherOrStudent: teacherOrStudent.current.value
             
 
-        }
+        
         // console.log(instrumentPicked.current.current.innerText);
         // console.log(Instrument);
         // API.registerLogin(user);
