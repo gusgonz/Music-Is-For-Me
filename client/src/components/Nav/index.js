@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../utils/UserContext";
 
 const navStyle = {
   color: 'white',
@@ -7,6 +8,8 @@ const navStyle = {
   marginRight: "10px"
 }
 function Nav() {
+  const userState = useContext(UserContext);
+  const profileLink = `/profile/${userState.currUser._id}`
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link to="/posts">
@@ -21,7 +24,7 @@ function Nav() {
         <h3 className="nav-item" style={navStyle}>Create Post</h3>
       </Link>
       <h1>  </h1>
-      <Link to="/profile/5eb49aca48f9a93a4492e417">
+      <Link to={profileLink}>
         <h3 className="nav-item" style={navStyle}>Profile</h3>
       </Link>
     </nav>
