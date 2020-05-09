@@ -1,6 +1,8 @@
 import React from 'react';
 import ToggleButton from "react-bootstrap/Button";
 import ButtonGroup from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 import "./style.css";
 
 
@@ -23,15 +25,19 @@ function HandleTeacherStudentClick({target}) {
 
     return(
         <>
-  <ButtonGroup toggle>
+  {/* <ButtonGroup toggle>
     <ToggleButton type="radio" name="radio" defaultChecked value="Teacher" onClick={HandleTeacherStudentClick}>
       Teacher
     </ToggleButton>
     <ToggleButton type="radio" name="radio" value="Student" onClick={HandleTeacherStudentClick}>
       Student
     </ToggleButton>
-  </ButtonGroup>
+  </ButtonGroup> */}
   {/* <textarea className="textAreaClass" name="" id="" cols="30" rows="10">Description of post</textarea> */}
+  <Form.Control as="select">
+                        <option>Teacher</option>
+                        <option>Student</option>
+                    </Form.Control>
 </>
     )
 }

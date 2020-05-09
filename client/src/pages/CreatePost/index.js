@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import DropDownMenu from "../../components/DropdownMenu";
 import TeacherStudentButtons from "../../components/TeacherStudentButtons";
 import SubmitButtonCreatePost from '../../components/SubmitButtonCreatePost';
 import ExampleSongCreatePost from '../../components/ExampleSongCreatePost';
 import DescriptionCreatePost from '../../components/DescriptionCreatePost';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Dropdown from "react-bootstrap/Dropdown";
+import FormControl from "react-bootstrap/FormControl";
+import Form from "react-bootstrap/Form";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Button from "react-bootstrap/Button";
+import UserContext from "../../utils/UserContext";
 import "./style.css";
 
 
@@ -11,12 +18,63 @@ import "./style.css";
 
 
 function CreatePost() {
+    // const [TeacherOrStudent, SetStateOfTeacherOrStudent] = useState("");
+    // const [Output, SetOutput] = useState({});
+    // const [Instrument, SetInstrument] = useState("");
+    // const [FormState, SetFormState] = useState("");
+    
+    
+    // Enable below line to enable user context along with importing
+    const userState = useContext(UserContext);
     // const [Instruments, SetInstruments] = useState([]);
-    const [TeacherOrStudent, SetStateOfTeacherOrStudent] = useState("");
+    // const [UserDescription, SetUserDescription] = useState("");
+    // const [UserDescription, SetUserDescription] = useState("");
+// email, username, userID from global context
     // const TeacherOrStudent = useRef();
-    // const InstrumentPicked = useRef();
+
+    const teacherOrStudent = useRef();
+    const instrumentPicked = useRef();
+    const description = useRef();
+    const urlYoutube = useRef();
+    const phoneNumber = useRef();
+
     // const Description = useRef();
-    // const [UserDescription, SetUserDescription] = useState([]);
+
+
+    // Use below for getting info using useRef based on what user put in, this is boilerplate from loginpage
+    // function GetCreatePostInfo(event) {
+    //     event.preventDefault();
+    //     SetInstrument(instrumentRef);
+        function createPostInfo() {
+            // console.log(teacherOrStudent.current.value);
+            // console.log(instrumentPicked.current.value);
+            // console.log(description.current.value);
+            // console.log(urlYoutube.current.value);
+
+            //below creates object of all the user inputs
+            let CreatePostObject = {
+                title: teacherOrStudent.current.value,
+                role: instrumentPicked.current.value,
+                description: description.current.value,
+                video: urlYoutube.current.value,
+                author_id: userState.currUser._id,
+                email: userState.currUser.email,
+                phone: phoneNumber.current.value
+            }
+            console.log(CreatePostObject);
+
+            }
+            // SetStateOfTeacherOrStudent(Instrument);
+            // Instrument: instrumentPicked.current.value,
+            // description: description.current.value,
+            // teacherOrStudent: teacherOrStudent.current.value
+            
+
+        
+        // console.log(instrumentPicked.current.current.innerText);
+        // console.log(Instrument);
+        // API.registerLogin(user);
+    
     
 
     // Similar to componentDidMount and componentDidUpdate:
@@ -29,17 +87,58 @@ function CreatePost() {
 
     return(
         <div>
-              
-        <DropDownMenu />
-        <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/>
+              <>
+              <Form.Control as="select" ref={teacherOrStudent}>
+                        <option>Teacher</option>
+                        <option>Student</option>
+                    </Form.Control>
+
+  <InputGroup>
+    <FormControl
+      ref={instrumentPicked}
+      placeholder="What instrument?"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+</InputGroup>
+<InputGroup>
+    <FormControl
+      ref={description}
+      placeholder="Description of post"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+  </InputGroup>
+
+  <InputGroup>
+    <FormControl
+      ref={urlYoutube}
+      placeholder="URL of example youtube"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+  </InputGroup>
+  <InputGroup>
+    <FormControl
+      ref={phoneNumber}
+      placeholder="Phone number: optional"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+  </InputGroup>
+  <Button as="input" type="submit" value="Submit" onClick={createPostInfo}/>{' '}
+</>
+        {/* <DropDownMenu instrumentRef={SetInstrument}/> */}
+        {/* <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/> */}
+        {/* <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/>
         <DescriptionCreatePost />
         <ExampleSongCreatePost />
-        <SubmitButtonCreatePost />
+        <SubmitButtonCreatePost GetCreatePostInfo={GetCreatePostInfo} /> */}
         {/* <Button
 Button className="submitButton" variant="primary" onClick={() => setCount(count + 1)}>
             Submit
         </Button>{' '} */}
-        <p>{TeacherOrStudent}</p>
+        {/* <p className="DescriptionOfPostText">{TeacherOrStudent}</p> */}
         </div>
     )
 }
