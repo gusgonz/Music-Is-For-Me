@@ -36,6 +36,7 @@ function CreatePost() {
     const instrumentPicked = useRef();
     const description = useRef();
     const urlYoutube = useRef();
+    const phoneNumber = useRef();
 
     // const Description = useRef();
 
@@ -57,7 +58,8 @@ function CreatePost() {
                 description: description.current.value,
                 video: urlYoutube.current.value,
                 author_id: userState.currUser._id,
-                email: userState.currUser.email
+                email: userState.currUser.email,
+                phone: phoneNumber.current.value
             }
             console.log(CreatePostObject);
 
@@ -112,6 +114,14 @@ function CreatePost() {
     <FormControl
       ref={urlYoutube}
       placeholder="URL of example youtube"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+  </InputGroup>
+  <InputGroup>
+    <FormControl
+      ref={phoneNumber}
+      placeholder="Phone number: optional"
       aria-label="Recipient's username"
       aria-describedby="basic-addon2"
     />
