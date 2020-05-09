@@ -17,11 +17,11 @@ function Nav() {
       <Link to="/posts">
         <h3 className="nav-item" style={navStyle}>Posts</h3>
       </Link>
-      <Link to="createpost">
+      <Link to="/createpost">
         <h3 className="nav-item" style={navStyle}>Create Post</h3>
       </Link>
       <h1>  </h1>
-      <Link to="profile">
+      <Link to="/profile/5eb49aca48f9a93a4492e417">
         <h3 className="nav-item" style={navStyle}>Profile</h3>
       </Link>
     </nav>
