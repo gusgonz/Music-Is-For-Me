@@ -2,11 +2,12 @@ import React from "react";
 import "./style.css";
 import Container from "react-bootstrap/Container";
 import Profile from "../../components/Profile";
+import ConnectToSpotify from "../../components/ConnectToSpotify";
 
 function ProfilePage() {
   return (
     <Container>
-      <a href='http://localhost:8888'> Login to Spotify </a>
+      <ConnectToSpotify />
       <Profile />
     </Container>
   );
