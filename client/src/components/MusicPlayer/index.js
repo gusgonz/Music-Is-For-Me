@@ -7,8 +7,11 @@ function MusicPlayer(props) {
       <ReactPlayer
       url={props.url}
       controls
-      height = "100%"
+      height = "90%"
       width = "95%"
+      style={{
+        marginTop:"3%"
+      }}
       />
 
       
