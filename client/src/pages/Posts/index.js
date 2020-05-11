@@ -4,8 +4,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import MusicContainer from "../../components/MusicContainer";
+import Jumbotron from "react-bootstrap/Jumbotron";
 import API from "../../utils/API";
 import UserContext from "../../utils/UserContext";
+import "./style.css";
 
 
 
@@ -58,15 +60,19 @@ function Posts() {
 
     return (
         <Container>
-            <Row name="SearchRow">
+            <Jumbotron className="postJumbo">
+                <h1>Find your next music student/teacher</h1>
+            </Jumbotron>
+            <Row name="SearchRow" className="justify-content-center">
             <Form>
-                <Form.Row>
-                <Col>
+                <Form.Row >
+                <Col >
                 <Form.Group>
                     <Form.Control type="search" placeholder="Search" onChange={handleSearchChange}></Form.Control>
                 </Form.Group>
                 </Col>
                 <Col>
+               
                     <Form.Control as="select" onChange={handleTypeChange} ref={testRef}>
                         <option>Select..</option>
                         <option>Teacher</option>
@@ -78,8 +84,16 @@ function Posts() {
             </Row>
             <Row name="ContentRow">
                 <Col>
+
                 {currPosts.map((p,index)=>{
                     console.log(p);
+
+                {currPosts.length===0 ? 
+                <h4>No Results Found</h4>
+                :
+                currPosts.map((p,index)=>{
+                    console.log(p)
+
                     return <MusicContainer
                     title={p.title}
                     video={p.video}

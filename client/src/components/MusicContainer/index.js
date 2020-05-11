@@ -3,6 +3,7 @@ import MusicPlayer from "../MusicPlayer"
 import Media from "react-bootstrap/Media";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import "./style.css"
 
 
 
@@ -11,7 +12,11 @@ function MusicContainer(props) {
 console.log(props.author_id);
   return (
 
-    <Media style={{ border: "2px solid blue" }}>
+    <Media  style={{
+      border: "2px solid blue",
+      backgroundColor: "white",
+      color:"black"
+    }}>
       <Media.Body>
         <Row>
           <Col>
