@@ -84,11 +84,16 @@ function Posts() {
             </Row>
             <Row name="ContentRow">
                 <Col>
+
+                {currPosts.map((p,index)=>{
+                    console.log(p);
+
                 {currPosts.length===0 ? 
                 <h4>No Results Found</h4>
                 :
                 currPosts.map((p,index)=>{
                     console.log(p)
+
                     return <MusicContainer
                     title={p.title}
                     video={p.video}

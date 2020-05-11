@@ -9,7 +9,7 @@ import "./style.css"
 
 
 function MusicContainer(props) {
-
+console.log(props.author_id);
   return (
 
     <Media  style={{
@@ -20,7 +20,7 @@ function MusicContainer(props) {
       <Media.Body>
         <Row>
           <Col>
-            <h2 className="mt-0"><a href={"/profile/" + props.userID}>{props.name}</a></h2>
+            <h2 className="mt-0"><a href={"/profile/" + props.author_id}>{props.name}</a></h2>
             <h4>Role: {props.role}</h4>
             <span>Email:</span><p>{props.email}</p>
             <span>Phone:</span><p>{props.phone}</p>

@@ -5,6 +5,9 @@ export default {
     getPosts: function () {
         return axios.get("/api/posts");
     },
+    createPost: function(data){
+        return axios.post("/api/posts",data);
+    },
     registerLogin: function (user) {
         return axios.post("/auth/register_login", user)
     },
