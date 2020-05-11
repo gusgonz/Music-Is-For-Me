@@ -7,6 +7,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Button from "react-bootstrap/Button";
 import UserContext from "../../utils/UserContext";
 import "./style.css";
+import API from "../../utils/API";
 
 
 
@@ -54,9 +55,13 @@ function CreatePost() {
                 video: urlYoutube.current.value,
                 author_id: userState.currUser._id,
                 email: userState.currUser.email,
-                phone: phoneNumber.current.value
+                phone: phoneNumber.current.value,
+                name:"temp name"
             }
             console.log(CreatePostObject);
+            API.createPost(CreatePostObject).then(results =>{
+              console.log(results);
+            })
 
             }
             // SetStateOfTeacherOrStudent(Instrument);
@@ -121,7 +126,7 @@ function CreatePost() {
       aria-describedby="basic-addon2"
     />
   </InputGroup>
-  <Button as="input" type="submit" value="Submit" onClick={createPostInfo}/>{' '}
+  <Button  type="submit"  onClick={createPostInfo}>Submit</Button>{' '}
 </>
         {/* <DropDownMenu instrumentRef={SetInstrument}/> */}
         {/* <TeacherStudentButtons TeacherOrStudent = {SetStateOfTeacherOrStudent}/> */}
