@@ -1,0 +1,16 @@
+.footer {
+    position: fixed; /* instead of absolute */
+    bottom: 0;
+    /* left: 0; */
+    background-color: black;
+    /* The rest of the styles */
+  }
+
+.alignFooterText {
+  align-items: center;
+  height: 10px;
+}
+
+.blackFooter {
+  background-color: black;
+}

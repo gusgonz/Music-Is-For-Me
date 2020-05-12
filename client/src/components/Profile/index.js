@@ -8,7 +8,7 @@ import API from "../../utils/API";
 import ConnectToSpotify from "../../components/ConnectToSpotify";
 import UserContext from "../../utils/UserContext";
 
-import "./styleProfile.css";
+import "./style.css";
 
 function Profile() {
   const { id } = useParams();
