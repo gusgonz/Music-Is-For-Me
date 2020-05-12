@@ -22,7 +22,7 @@ function Login() {
       email: email.current.value,
       password: password.current.value
     }
-    console.log(user);
+    console.log("logging in");
     API.registerLogin(user).then(results => {
       userState.setCurrUser(results.data.user);
       setLoginState({...loginState, loggedIn: true});

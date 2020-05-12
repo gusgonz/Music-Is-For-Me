@@ -24,7 +24,7 @@ function Nav() {
         <h3 className="nav-item" style={navStyle}>Create Post</h3>
       </Link>
       <h1>  </h1>
-      <Link to={profileLink}>
+      <Link to={"/profile/"+userState.currUser._id}>
         <h3 className="nav-item" style={navStyle}>Profile</h3>
       </Link>
     </nav>

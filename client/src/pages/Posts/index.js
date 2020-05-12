@@ -19,7 +19,6 @@ function Posts() {
     const userState = useContext(UserContext);
     useEffect(() => {
         loadPosts();
-        console.log(userState)
     },[]);
 
     function loadPosts(){
@@ -89,6 +88,7 @@ function Posts() {
                 <h4>No Results Found</h4>
                 :
                 currPosts.map((p,index)=>{
+                    const yourPost = (p.author_id===userState.currUser._id);
                     return <MusicContainer
                     title={p.title}
                     video={p.video}
@@ -99,6 +99,7 @@ function Posts() {
                     role={p.role}
                     description={p.description}
                     key={index}
+                    ownPost = {yourPost}
                     />
                 })}
                 </Col>
