@@ -8,9 +8,10 @@
 
 .alignFooterText {
   align-items: center;
-  height: 10px;
+  /* height: 10px; */
 }
 
 .blackFooter {
   background-color: black;
+  border: black;
 }

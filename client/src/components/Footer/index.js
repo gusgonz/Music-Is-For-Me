@@ -12,11 +12,11 @@ const navStyle = {
 
 function Footer() {
     return(
-        <Navbar expand="lg" variant="light"  fixed="bottom" className="blackFooter">
-            
+        <Navbar expand="sm"  fixed="bottom" className="blackFooter">
+            <Container className="blackFooter">
                 <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Navbar</Navbar.Brand>
                 <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Navbar</Navbar.Brand>
-            
+            </Container>
         </Navbar>
     )
 }
