@@ -9,19 +9,21 @@ import './style.css'
 
 const navStyle = {
     color: 'white',
-    marginLeft: "10px",
-    marginRight: "10px"
+    margin: 0
+    // marginLeft: "10px",
+    // marginRight: "10px"
   }
 
 function Footer() {
     return(
         <Navbar expand="sm"  fixed="bottom" className="blackFooter">
             <Container className="blackFooter">
-                <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Email Us</Navbar.Brand>
+                {/* <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Email Us</Navbar.Brand> */}
                 <FormControl
-      placeholder="Email us with any suggestions to improve application."
-      aria-label="Email us with any suggestions to improve application."
+      placeholder="Email us with any suggestions."
+      aria-label="Email us with any suggestions."
       aria-describedby="basic-addon2"
+      className="widthFormControlInFooter"
     />
                 {/* <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Navbar</Navbar.Brand> */}
             </Container>

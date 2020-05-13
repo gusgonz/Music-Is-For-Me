@@ -6,6 +6,12 @@
     /* The rest of the styles */
   }
 
+.widthFormControlInFooter{
+  width: 23%;
+  display: flex;
+  background-color: black;
+  }
+
 .alignFooterText {
   align-items: center;
   /* height: 10px; */
