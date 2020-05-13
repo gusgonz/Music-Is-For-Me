@@ -4,6 +4,7 @@ import Posts from "./pages/Posts";
 import UserContext from "./utils/UserContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
+import Footer from './components/Footer'
 import CreatePost from "./pages/CreatePost";
 import ProfilePage from "./pages/ProfilePage";
 import Login from './pages/LoginPage';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/posts" component={Posts} />
           <Route path="/" component={Login}/>
         </Switch>
+      <Footer></Footer>
         </UserContext.Provider>
       </div>
     </Router>
