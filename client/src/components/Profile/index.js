@@ -60,6 +60,9 @@ function Profile() {
       </Container >
     )
   }
+  else if (!userState.currUser._id){
+    return <h1>You Must Be Logged In To View This Page</h1>
+  }
 
   //if viewing someone elses profile
   return (
