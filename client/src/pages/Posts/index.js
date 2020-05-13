@@ -27,7 +27,7 @@ function Posts() {
              setCurrPosts({
                  search: "",
                  targetType: "",
-                 currPosts:[]
+                 currPosts: results.data
              });
         })
     }
