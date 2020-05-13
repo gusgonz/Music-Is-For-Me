@@ -42,7 +42,7 @@ function Nav() {
       <Link to={"/login"} onClick={() => 
       handleLogout()
       }>
-        <h3 className="alignLoginLogoutRight navBarh3Tags nav-item">Logout</h3>
+        <h3 className="alignLoginLogoutRight justify-content-end">Logout</h3>
       </Link>
     </nav>
   )};
