@@ -18,19 +18,33 @@ const spotifyDataSchema = new Schema({
 
 const userSchema = new Schema({
     firstName: {
-        type: String
+        type: String,
+        trim: true,
+        required: false,
+        minlength: 1,
+        default: "anonymous"
     },
     lastName: {
-        type: String
+        type: String,
+        trim: true,
+        required: false,
+        minlength: 1,
+        default: "anonymous"
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        trim: true,
+        required: true,
+        minlength: 6
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        trim: true,
+        required: true,
+        minlength: 8
     },
     date: {
         type: Date,
