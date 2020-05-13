@@ -25,3 +25,9 @@ body {
   color: rgb(207, 207, 207);
 }
 
+.permanentMarkerFont {
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  font-size: 3.1em;
+}
+
