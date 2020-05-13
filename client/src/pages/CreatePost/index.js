@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
+import Container from "react-bootstrap/Container";
 import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from "react-bootstrap/Dropdown";
 import FormControl from "react-bootstrap/FormControl";
@@ -82,10 +83,15 @@ function CreatePost() {
         // document.title = `You clicked ${count} times`;
       });
 
-
+      if (!userState.currUser._id){
+        return  <Container>
+        <h1>You Must Be Logged In To View This Page</h1>
+        </Container>
+      }
 
 
     return(
+      <Container>
         <div>
               <>
               <Form.Control as="select" ref={teacherOrStudent}>
@@ -140,6 +146,7 @@ Button className="submitButton" variant="primary" onClick={() => setCount(count 
         </Button>{' '} */}
         {/* <p className="DescriptionOfPostText">{TeacherOrStudent}</p> */}
         </div>
+        </Container>
     )
 }
 
