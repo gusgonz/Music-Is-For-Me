@@ -9,4 +9,6 @@
 
 .alignTextLeft {
     text-align: left;
+    margin-top: 1em;
+    color: white;
 }

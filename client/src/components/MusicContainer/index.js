@@ -14,21 +14,22 @@ console.log(props.author_id);
 let renderStyle={};
 if(props.ownPost){
  renderStyle= {
-    border: "2px solid blue",
-    backgroundColor: "gray",
+    // border: "2px solid blue",
+    backgroundColor: "white",
     color:"black"
   }
 }
 else{
 renderStyle={
-  border: "2px solid blue",
+  // border: "2px solid blue",
   backgroundColor: "white",
-  color:"black"
+  color:"black",
+  marginTop: 10
 }
 }
   return (
 
-    <Media  style={renderStyle}>
+    <Media  className="rounded" style={renderStyle}>
       <Media.Body>
         <Row>
           <Col>

@@ -49,13 +49,13 @@ function Profile() {
             alt="Generic placeholder"
           />
           <Media.Body>
-            <h1>{currProfile.firstName} {currProfile.lastName}</h1>
+            <h2 className="amaticGoogleFont alignLeft">{currProfile.firstName} {currProfile.lastName}</h2>
 
             <Card.Text>
-              <a>{currProfile.email}</a>
+              <p className="alignLeft">{currProfile.email}</p>
             </Card.Text>
 
-            <p>
+            <p className="alignLeft">
               Nicolas Cage was born Nicolas Kim Coppola on January 7, 1964, in
               Long Beach, California, to choreographer Joy Vogelsang and
               literature professor August Coppola. ... He chose the name Cage as
@@ -71,7 +71,7 @@ function Profile() {
     )
   }
   else if (!userState.currUser._id) {
-    return <h1>You Must Be Logged In To View This Page</h1>
+    return <h2 className="amaticGoogleFont">You Must Be Logged In To View This Page</h2>
   }
 
   //if viewing someone elses profile

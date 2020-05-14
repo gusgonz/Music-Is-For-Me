@@ -97,12 +97,14 @@ function CreatePost() {
           <InputGroup>
             <FormControl
               ref={description}
+              as="textarea"
               placeholder="Description of post"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
+              rows="6"
             />
           </InputGroup>
-
+          <p className="alignTextLeft">Put your favorite song below.</p>
           <InputGroup>
             <FormControl
               ref={urlYoutube}
@@ -111,6 +113,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
+          <p className="alignTextLeft">If you're feeling secure put in your phone number.</p>
           <InputGroup>
             <FormControl
               ref={phoneNumber}

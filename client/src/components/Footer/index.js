@@ -17,8 +17,8 @@ const navStyle = {
 
 function Footer() {
     return(
-        <Navbar expand="sm"  fixed="bottom" className="blackFooter">
-            <Container className="blackFooter">
+        <Navbar expand="sm" fixed="bottom" className="blackFooter">
+            <Container className="blackBackground">
                 {/* <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Email Us</Navbar.Brand> */}
                 <FormControl
       placeholder="Email us with any suggestions."
