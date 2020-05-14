@@ -65,7 +65,7 @@ function CreatePost() {
 
   if (!userState.currUser._id) {
     return <div>
-      <h2 className="amaticGoogleFont">You Must Be Logged In To View This Page</h2>
+      <h2 className="whiteText amaticGoogleFont">You Must Be Logged In To View This Page</h2>
     </div>
   }
 

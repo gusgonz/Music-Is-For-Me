@@ -69,7 +69,7 @@ function Profile() {
     )
   }
   else if (!userState.currUser._id) {
-    return <h2 className="amaticGoogleFont">You Must Be Logged In To View This Page</h2>
+    return <h2 className="whiteText amaticGoogleFont">You Must Be Logged In To View This Page</h2>
   }
 
   //if viewing someone elses profile
