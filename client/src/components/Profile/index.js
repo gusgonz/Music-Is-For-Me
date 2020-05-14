@@ -45,27 +45,23 @@ function Profile() {
             width={200}
             height={200}
             className="mr-3"
-            src="https://www.placecage.com/c/200/300"
+            src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url:"https://via.placeholder.com/200"}
             alt="Generic placeholder"
           />
           <Media.Body>
-            <h1>{currProfile.firstName} {currProfile.lastName}</h1>
+            <h1>{userState.currUser.firstName} {userState.currUser.lastName}</h1>
 
             <Card.Text>
-              <a>{currProfile.email}</a>
+              <a>{userState.currUser.email}</a>
             </Card.Text>
 
             <p>
-              Nicolas Cage was born Nicolas Kim Coppola on January 7, 1964, in
-              Long Beach, California, to choreographer Joy Vogelsang and
-              literature professor August Coppola. ... He chose the name Cage as
-              a tribute to comic-book superhero Luke Cage. Cage is known for his
-              edgy, intense personality and for his passion for method acting.
-    </p>
+              {userState.currUser.bio ? userState.currUser.bio : "this user has not created a bio yet."}
+            </p>
           </Media.Body>
           <Button onClick={editUserProfile}>Edit Profile</Button>
         </Media>
-        <ConnectToSpotify userID={id} hasSpotify={currProfile.has_spotify} changeProfile={setCurrProfile} />
+        <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={setCurrProfile} />
 
       </Container >
     )
@@ -82,22 +78,18 @@ function Profile() {
           width={200}
           height={200}
           className="mr-3"
-          src="https://www.placecage.com/c/200/300"
+          src={currProfile.has_spotify ? currProfile.spotify_data.image_url:"https://via.placeholder.com/200"}
           alt="Generic placeholder"
         />
         <Media.Body>
-          <h1>Nicolas Cage</h1>
+          <h1>{currProfile.firstName} {currProfile.lastName}</h1>
 
           <Card.Text>
-            <a>email: NicoCage@yahoo.com</a>
+            <a>{currProfile.email}</a>
           </Card.Text>
 
           <p>
-            Nicolas Cage was born Nicolas Kim Coppola on January 7, 1964, in
-            Long Beach, California, to choreographer Joy Vogelsang and
-            literature professor August Coppola. ... He chose the name Cage as
-            a tribute to comic-book superhero Luke Cage. Cage is known for his
-            edgy, intense personality and for his passion for method acting.
+            {currProfile.bio ? currProfile.bio : "this user has not created a bio yet."}
     </p>
         </Media.Body>
       </Media>
