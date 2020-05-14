@@ -46,6 +46,10 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
+    bio: {
+        type: String,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now
