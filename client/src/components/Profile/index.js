@@ -63,7 +63,7 @@ function Profile() {
           </Media.Body>
           <Button variant="danger" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
-        <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={setCurrProfile} />
+        <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />
 
       </Container >
     )

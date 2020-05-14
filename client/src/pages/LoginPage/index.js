@@ -35,7 +35,7 @@ function Login() {
 
 
   if(loginState.loggedIn){
-    return <Redirect to="/posts"></Redirect>
+    return <Redirect to={"/profile/"+userState.currUser._id}></Redirect>
   }
   else{
 

@@ -35,7 +35,10 @@ function ConnectToSpotify(props) {
                 .then(response => {
                     console.log(response);
                     API.saveSpotifyData(props.userID, response.data)
-                        .then(resp => console.log(resp));
+                        .then(resp => {
+                            props.changeProfile(resp.data);
+                            console.log(resp)
+                        });
                 })
                 .catch(err => console.log(err));
             // Set token
