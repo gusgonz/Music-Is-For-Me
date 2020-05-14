@@ -48,7 +48,7 @@ function CreatePost() {
       author_id: userState.currUser._id,
       email: userState.currUser.email,
       phone: phoneNumber.current.value,
-      name: "temp name"
+      name: userState.currUser.firstName + " "+ userState.currUser.lastName
     }
     console.log(CreatePostObject);
     API.createPost(CreatePostObject).then(results => {

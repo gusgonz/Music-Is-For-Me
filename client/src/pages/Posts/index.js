@@ -36,7 +36,7 @@ function Posts() {
         console.log(testRef.current.value)
         let newArr = allPosts.filter(post => {
             // console.log(search, " ", post.name);
-            return post.title===target.value && post.role.includes(search);
+            return post.title===target.value && post.role.toLowerCase().includes(search.toLowerCase());
         })
         setCurrPosts({
             currPosts: newArr,
@@ -47,7 +47,7 @@ function Posts() {
 
     function handleSearchChange({target}){
         let newArr = allPosts.filter(post => {
-            return post.title===targetType && post.role.includes(target.value);
+            return post.title===targetType && post.role.toLowerCase().includes(target.value.toLowerCase());
         });
 
         setCurrPosts({

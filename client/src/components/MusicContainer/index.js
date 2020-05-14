@@ -15,7 +15,7 @@ let renderStyle={};
 if(props.ownPost){
  renderStyle= {
     // border: "2px solid blue",
-    backgroundColor: "white",
+    backgroundColor: 'rgba(255,255,255,0.5)',
     color:"black"
   }
 }
@@ -38,10 +38,6 @@ renderStyle={
             <span>Email:</span><p>{props.email}</p>
             <span>Phone:</span><p>{props.phone}</p>
             <p>{props.description}</p>
-            {props.ownPost ? 
-            <p>hi</p> 
-            : ""
-            }
           </Col>
           <Col lg={5} md={5} sm={5} xs={5}>
             <MusicPlayer
