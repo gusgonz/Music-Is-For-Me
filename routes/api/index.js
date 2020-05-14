@@ -8,12 +8,14 @@ router.route("/posts")
     .post(postController.create);
 
 router.route("/posts/:id")
-    .put(postController.edit)
     .delete(postController.delete)
 
 // route: "/api/users/:id"
 router.route("/users/:id")
     .get(userController.findByID)
+    .put(userController.updateProfile);
+
+router.route("/spotify/:id")
     .put(userController.addSpotifyData);
 
 

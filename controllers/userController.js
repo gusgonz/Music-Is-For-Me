@@ -32,5 +32,19 @@ module.exports = {
                 return res.json(user);
             })
             .catch(err => res.status(422).json(err));
+    },
+    updateProfile: function (req, res) {
+        let id = req.params.id;
+        db.User
+            .findById(id)
+            .select("-password")
+            .then(user => {
+                if (req.body.bio) user.bio = req.body.bio;
+                if (req.body.firstName) user.firstName = req.body.firstName;
+                if (req.body.lastName) user.lastName = req.body.lastName;
+                user.save();
+                return res.json(user);
+            })
+            .catch(err => res.status(422).json(err));
     }
 }
