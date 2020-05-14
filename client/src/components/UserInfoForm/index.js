@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import UserContext from "../../utils/UserContext";
 import Button from "react-bootstrap/Button";
 import API from "../../utils/API";
+import './style.css'
 
 
 function UserInfoForm(props) {
@@ -42,7 +43,7 @@ function UserInfoForm(props) {
         )
     }
     return (
-        <Form>
+        <Form className="userInfoFormContainer">
             <Form.Row>
                 <Col>
                     <Form.Label>First Name</Form.Label>
