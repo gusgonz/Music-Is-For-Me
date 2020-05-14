@@ -40,6 +40,7 @@ function Login() {
   else{
 
     return (
+      <div className="loginContainer">
         <Form className="marginFromTop">
           <Form.Group controlId="formBasicEmail">
             <Form.Label className="DescriptionOfPostText loginPageFont">Email address</Form.Label> <br/>
@@ -58,7 +59,7 @@ function Login() {
         The email and password you entered do not match what is in our system. Please try again.
       </Alert>
         </Form>
-      
+      </div>
       )
     }
     }
