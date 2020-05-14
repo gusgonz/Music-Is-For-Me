@@ -1,3 +1,24 @@
-.navStyle {
-    background-color: #3F54B9;
+
+
+.navbarColor {
+    background-color: rgb(33, 36, 53);
+    color: white;
+}
+
+.paddingForLogoToPushStuffRight {
+    padding-right: 20px;
+}
+
+.alignLoginLogoutRight {
+    /* margin: 0;
+    top: 0;
+    right: 60;
+    bottom:20; */
+    /* margin-left: auto; */
+    /* left: auto; */
+    /* position: fixed; */  
+    /* margin-left: 100%; */
+    /* margin-left: 28em; */
+    color: white;
+    font-family: 'Amatic SC', cursive;
 }

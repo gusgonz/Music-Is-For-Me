@@ -64,9 +64,9 @@ function CreatePost() {
   });
 
   if (!userState.currUser._id) {
-    return <Container>
-      <h1>You Must Be Logged In To View This Page</h1>
-    </Container>
+    return <div>
+      <h2 className="amaticGoogleFont">You Must Be Logged In To View This Page</h2>
+    </div>
   }
 
   else if (postCreated) {
@@ -78,11 +78,13 @@ function CreatePost() {
     <Container>
       <div>
         <>
+          <p className="alignTextLeft">Hey there, are you a music teacher or a student?</p>
+          {/* <Form.Label>First Name</Form.Label> */}
           <Form.Control as="select" ref={teacherOrStudent}>
             <option>Teacher</option>
             <option>Student</option>
           </Form.Control>
-
+          <p className="alignTextLeft">What instruments do you play or want to learn?</p>
           <InputGroup>
             <FormControl
               ref={instrumentPicked}
@@ -91,15 +93,18 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
+          <p className="alignTextLeft">Below write a description of what you wanna do.</p>
           <InputGroup>
             <FormControl
               ref={description}
+              as="textarea"
               placeholder="Description of post"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
+              rows="6"
             />
           </InputGroup>
-
+          <p className="alignTextLeft">Put your favorite song below.</p>
           <InputGroup>
             <FormControl
               ref={urlYoutube}
@@ -108,6 +113,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
+          <p className="alignTextLeft">If you're feeling secure put in your phone number.</p>
           <InputGroup>
             <FormControl
               ref={phoneNumber}
@@ -116,7 +122,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
-          <Button type="submit" onClick={createPostInfo}>Submit</Button>{' '}</>
+          <Button className="submitBtn" variant="danger" type="submit" onClick={createPostInfo}>Submit</Button>{' '}</>
       </div>
     </Container>
   )

@@ -49,17 +49,19 @@ function Profile() {
             alt="Generic placeholder"
           />
           <Media.Body>
-            <h1>{userState.currUser.firstName} {userState.currUser.lastName}</h1>
+
+            <h2 className="amaticGoogleFont alignLeft">{userState.currUser.firstName} {userState.currUser.lastName}</h2>
 
             <Card.Text>
-              <a>{userState.currUser.email}</a>
+              <p className="alignLeft">{userState.currUser.email}</p>
             </Card.Text>
 
-            <p>
+            <p className="alignLeft">
               {userState.currUser.bio ? userState.currUser.bio : "this user has not created a bio yet."}
-            </p>
+    </p>
+
           </Media.Body>
-          <Button onClick={editUserProfile}>Edit Profile</Button>
+          <Button variant="danger" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
         <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={setCurrProfile} />
 
@@ -67,7 +69,7 @@ function Profile() {
     )
   }
   else if (!userState.currUser._id) {
-    return <h1>You Must Be Logged In To View This Page</h1>
+    return <h2 className="amaticGoogleFont">You Must Be Logged In To View This Page</h2>
   }
 
   //if viewing someone elses profile
@@ -82,13 +84,13 @@ function Profile() {
           alt="Generic placeholder"
         />
         <Media.Body>
-          <h1>{currProfile.firstName} {currProfile.lastName}</h1>
+         <h2 className="amaticGoogleFont alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
 
           <Card.Text>
-            <a>{currProfile.email}</a>
+            <p className="alignLeft">{currProfile.email}</p>
           </Card.Text>
 
-          <p>
+          <p className="alignLeft">
             {currProfile.bio ? currProfile.bio : "this user has not created a bio yet."}
     </p>
         </Media.Body>

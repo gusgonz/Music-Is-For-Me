@@ -14,7 +14,7 @@ function App() {
   return (
     
     <Router>
-      <div className="App">
+      <div className="flex-wrapper App">
       <UserContext.Provider value={{currUser, setCurrUser}}>
         <Nav></Nav>
         <Switch>

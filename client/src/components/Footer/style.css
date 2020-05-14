@@ -1,9 +1,14 @@
 .footer {
-    position: fixed; /* instead of absolute */
-    bottom: 0;
-    /* left: 0; */
-    background-color: black;
-    /* The rest of the styles */
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  }
+
+.widthFormControlInFooter{
+  width: 23%;
+  display: inline;
+  background-color: black;
   }
 
 .alignFooterText {
@@ -11,7 +16,28 @@
   /* height: 10px; */
 }
 
+/* .flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between
+} */
+
 .blackFooter {
   background-color: black;
   border: black;
+  /* position: sticky; */
+  /* position:absolute; */
+  /* left:0;
+  bottom:0;
+  right:0; */
+  /* margin-top: auto; */
+  /* margin-top:calc(20% + 60px); */
+  /* bottom: 0; */
+}
+
+.blackBackground {
+  background-color: black;
+  border: black;
+  
 }

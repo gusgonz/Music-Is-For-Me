@@ -6,3 +6,13 @@
 .DescriptionOfPostText {
     color: white;
 }
+
+.alignTextLeft {
+    text-align: left;
+    margin-top: 1em;
+    color: white;
+}
+
+.submitBtn {
+    margin-top: 1em;
+}
