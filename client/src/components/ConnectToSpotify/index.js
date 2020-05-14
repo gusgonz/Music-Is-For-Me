@@ -5,7 +5,7 @@ import API from "../../utils/API";
 const authEndpoint = 'https://accounts.spotify.com/authorize?';
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "93f3e7a8e86a42458d76a49b88d88648";
-const redirectUri = "http://localhost:3000/profile";
+const redirectUri = "http://localhost:3000/posts";
 const scopes = ["user-read-private", "user-read-email"];
 
 // Get the hash of the url
@@ -21,7 +21,7 @@ const hash = window.location.hash
     }, {});
 window.location.hash = "";
 
-function ConnectToSpotify() {
+function ConnectToSpotify(props) {
 
     const [spotifyToken, setSpotifyToken] = useState();
 
@@ -34,7 +34,7 @@ function ConnectToSpotify() {
             API.getSpotifyData(_token)
                 .then(response => {
                     console.log(response);
-                    API.saveSpotifyData("5eb0b5487046b007addd568f", response.data)
+                    API.saveSpotifyData(props.userID, response.data)
                         .then(resp => console.log(resp));
                 })
                 .catch(err => console.log(err));
