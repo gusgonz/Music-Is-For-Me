@@ -20,7 +20,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   height: 100%;
   position: relative;
   background-image: linear-gradient(to bottom right, rgb(140, 0, 255), rgb(0, 255, 42));
@@ -41,9 +41,10 @@ p {
 
 .container {
   margin-top: 40px;
-  background-color:#3F54B9;
+  padding-top: 15px;
+  background-color: rgba(33, 36, 53, 0.7);
   border-radius: 20px;
-  border:5px solid #3F54B9;
+  background-color: rgba(33, 36, 53, 0.7);
   color: rgb(207, 207, 207);
 }
 
