@@ -1,3 +1,13 @@
 .DescriptionOfPostText {
     color: white;
 }
+
+.widthOfLoginForm {
+    width: 20%;
+    align-items: center;
+    display: inline;
+}
+
+.marginFromTop {
+    margin-top: 1em;
+}

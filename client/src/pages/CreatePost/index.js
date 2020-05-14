@@ -65,7 +65,7 @@ function CreatePost() {
 
   if (!userState.currUser._id) {
     return <Container>
-      <h1>You Must Be Logged In To View This Page</h1>
+      <h2 className="amaticGoogleFont">You Must Be Logged In To View This Page</h2>
     </Container>
   }
 
@@ -93,7 +93,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
-          <p className="alignTextLeft">Below write whatever yah wanna write.</p>
+          <p className="alignTextLeft">Below write a description of what you wanna do.</p>
           <InputGroup>
             <FormControl
               ref={description}
