@@ -18,13 +18,13 @@ function UserInfoForm(props) {
         console.log(userState.currUser);
         const updatedUser = {...usr};
 
-        if(firstName != ""){
+        if(firstName.current.value != ""){
             updatedUser.firstName = firstName.current.value;
         }
-        if(lastName!=""){
-            updatedUser.lastName = bio.current.value;
+        if(lastName.current.value !=""){
+            updatedUser.lastName = lastName.current.value;
         }
-        if(bio != ""){
+        if(bio.current.value != ""){
             updatedUser.bio = bio.current.value;
         }
         console.log(updatedUser);
