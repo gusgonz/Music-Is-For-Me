@@ -42,13 +42,13 @@ function Login() {
     return (
         <Form className="marginFromTop">
           <Form.Group controlId="formBasicEmail">
-            <Form.Label className="DescriptionOfPostText">Email address</Form.Label> <br/>
+            <Form.Label className="DescriptionOfPostText amaticGoogleFont ">Email address</Form.Label> <br/>
             <Form.Control className="widthOfLoginForm" type="email" placeholder="Enter email" ref={email} />
             
           </Form.Group>
       
           <Form.Group controlId="formBasicPassword">
-            <Form.Label className="DescriptionOfPostText">Password</Form.Label> <br/>
+            <Form.Label className="DescriptionOfPostText amaticGoogleFont ">Password</Form.Label> <br/>
             <Form.Control className="widthOfLoginForm" type="password" placeholder="Password" ref={password} />
           </Form.Group>
           <Button variant="primary" type="submit" onClick={GetLoginInfo}>
