@@ -5,7 +5,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
 import API from "../../utils/API";
-import ConnectToSpotify from "../../components/ConnectToSpotify";
+import ConnectToSpotify from "../ConnectToSpotify";
+import UserInfoForm from "../UserInfoForm"
 import UserContext from "../../utils/UserContext";
 
 import "./style.css";
@@ -13,6 +14,7 @@ import "./style.css";
 function Profile() {
   const { id } = useParams();
   const [currProfile, setCurrProfile] = useState({});
+  const [editProfile, setEditProfile] = useState(false);
   const userState = useContext(UserContext);
 
   function loadUser() {
@@ -22,6 +24,10 @@ function Profile() {
     });
   }
 
+  function editUserProfile() {
+    setEditProfile(true);
+  }
+
   useEffect(() => {
     loadUser();
   }, []);
@@ -29,6 +35,9 @@ function Profile() {
   // if accessing your own profile
   if (id === userState.currUser._id) {
     console.log("your profile");
+    if (editProfile) {
+      return (<UserInfoForm editState={setEditProfile} />)
+    }
     return (
       <Container>
         <Media>
@@ -40,10 +49,10 @@ function Profile() {
             alt="Generic placeholder"
           />
           <Media.Body>
-            <h1>Nicolas Cage</h1>
+            <h1>{currProfile.firstName} {currProfile.lastName}</h1>
 
             <Card.Text>
-              <a>email: NicoCage@yahoo.com</a>
+              <a>{currProfile.email}</a>
             </Card.Text>
 
             <p>
@@ -54,13 +63,14 @@ function Profile() {
               edgy, intense personality and for his passion for method acting.
     </p>
           </Media.Body>
+          <Button onClick={editUserProfile}>Edit Profile</Button>
         </Media>
         <ConnectToSpotify userID={id} hasSpotify={currProfile.has_spotify} changeProfile={setCurrProfile} />
 
       </Container >
     )
   }
-  else if (!userState.currUser._id){
+  else if (!userState.currUser._id) {
     return <h1>You Must Be Logged In To View This Page</h1>
   }
 
