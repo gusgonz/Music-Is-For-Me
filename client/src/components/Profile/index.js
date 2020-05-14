@@ -63,7 +63,7 @@ function Profile() {
               edgy, intense personality and for his passion for method acting.
     </p>
           </Media.Body>
-          <Button onClick={editUserProfile}>Edit Profile</Button>
+          <Button variant="danger" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
         <ConnectToSpotify userID={id} hasSpotify={currProfile.has_spotify} changeProfile={setCurrProfile} />
 

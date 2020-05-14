@@ -1,9 +1,9 @@
 
 
-/* .navbarColor {
-    background-color: #3F54B9;
+.navbarColor {
+    background-color: rgb(33, 36, 53);
     color: white;
-} */
+}
 
 .paddingForLogoToPushStuffRight {
     padding-right: 20px;
