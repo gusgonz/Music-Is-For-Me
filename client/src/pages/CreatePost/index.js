@@ -78,11 +78,13 @@ function CreatePost() {
     <Container>
       <div>
         <>
+          <p className="alignTextLeft">Hey there, are you a music teacher or a student?</p>
+          {/* <Form.Label>First Name</Form.Label> */}
           <Form.Control as="select" ref={teacherOrStudent}>
             <option>Teacher</option>
             <option>Student</option>
           </Form.Control>
-
+          <p className="alignTextLeft">What instruments do you play or want to learn?</p>
           <InputGroup>
             <FormControl
               ref={instrumentPicked}
@@ -91,6 +93,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
+          <p className="alignTextLeft">Below write whatever yah wanna write.</p>
           <InputGroup>
             <FormControl
               ref={description}

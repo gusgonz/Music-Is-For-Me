@@ -8,7 +8,7 @@
 
 .widthFormControlInFooter{
   width: 23%;
-  display: flex;
+  display: inline;
   background-color: black;
   }
 

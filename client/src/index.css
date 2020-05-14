@@ -20,7 +20,12 @@ p {
 }
 
 body {
-  background-color: #141414;
+  /* background-color: #141414; */
+  background-image: linear-gradient(to bottom right, rgb(140, 0, 255), rgb(0, 255, 42));
+}
+.navbarColor {
+  background-color: #3F54B9;
+  color: white;
 }
 
 .container {
@@ -35,7 +40,17 @@ body {
   /* font-family: 'Permanent Marker', cursive; */
   font-family: 'Amatic SC', cursive;
   color: white;
-  /* font-size: 3.1em; */
-  font-size: 4.5em;
+  font-size: 4em;
+  /* font-size: 2em; */
+}
+
+.navBarh3Tags {
+  /* background-color: #3F54B9; */
+  color: white;
+  margin-left: 30px;
+  margin-right: 5px;
+  font-size: 1.5em;
+  /* font-family: 'Permanent Marker', cursive; */
+  font-family: 'Amatic SC', cursive;
 }
 

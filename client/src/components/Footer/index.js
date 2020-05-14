@@ -5,6 +5,7 @@ import FormControl from 'react-bootstrap/FormControl';
 
 
 
+
 import './style.css'
 
 const navStyle = {
@@ -27,6 +28,9 @@ function Footer() {
     />
                 {/* <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Navbar</Navbar.Brand> */}
             </Container>
+    <img src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow"/>
+    <img src={require('../../assets/icons/facebook.svg')} alt="Facebook Icon"/>
+    <img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width='5%' height='5%'/>
         </Navbar>
     )
 }

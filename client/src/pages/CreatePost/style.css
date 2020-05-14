@@ -6,3 +6,7 @@
 .DescriptionOfPostText {
     color: white;
 }
+
+.alignTextLeft {
+    text-align: left;
+}
