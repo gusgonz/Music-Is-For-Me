@@ -10,12 +10,12 @@ router.post("/register_login", (req, res, next) => {
         if (user === false) {
             return res.status(400).json({ errors: "Incorrect Password" });
         }
-        console.log(user);
+        // console.log(user);
         req.logIn(user, function (err) {
             if (err) {
                 return res.status(400).json({ errors: err });
             }
-            console.log("logged");
+            console.log("logged in");
             return res.status(200).json(
                 {
                     success: `logged in ${user.id}`,

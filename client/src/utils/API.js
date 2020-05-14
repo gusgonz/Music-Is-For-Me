@@ -5,8 +5,8 @@ export default {
     getPosts: function () {
         return axios.get("/api/posts");
     },
-    createPost: function(data){
-        return axios.post("/api/posts",data);
+    createPost: function (data) {
+        return axios.post("/api/posts", data);
     },
     registerLogin: function (user) {
         return axios.post("/auth/register_login", user)
@@ -20,10 +20,10 @@ export default {
         });
     },
     saveSpotifyData: function (id, data) {
-        return axios.put("/api/users/" + id, data);
+        return axios.put("/api/spotify/" + id, data);
     },
-    getUser : function(id){
-        return axios.get("/api/users/"+id);
+    getUser: function (id) {
+        return axios.get("/api/users/" + id);
 
     }
 }
