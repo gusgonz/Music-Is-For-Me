@@ -25,5 +25,8 @@ export default {
     getUser: function (id) {
         return axios.get("/api/users/" + id);
 
+    },
+    editUser : function(id, data){
+        return axios.put("/api/users/"+id, data);
     }
 }

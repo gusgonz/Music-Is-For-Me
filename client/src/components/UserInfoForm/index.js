@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import { Redirect } from "react-router-dom";
 import UserContext from "../../utils/UserContext";
 import Button from "react-bootstrap/Button";
+import API from "../../utils/API";
 
 
 function UserInfoForm(props) {
@@ -28,6 +29,8 @@ function UserInfoForm(props) {
             updatedUser.bio = bio.current.value;
         }
         console.log(updatedUser);
+        API.editUser(usr._id,updatedUser);
+        userState.setCurrUser(updatedUser);
         props.editState(false);
         setSaveUser(true);
     }
@@ -54,7 +57,7 @@ function UserInfoForm(props) {
             <Form.Row>
                 <Col>
                     <Form.Label>Bio</Form.Label>
-                    <Form.Control as="textarea" rows="3" placeholder="Enter Bio Here" ref={bio}/>
+                    <Form.Control as="textarea" rows="3" placeholder={usr.bio} ref={bio}/>
                 </Col>
             </Form.Row>
             <Button onClick={saveUserInfo}>Save Changes</Button>
