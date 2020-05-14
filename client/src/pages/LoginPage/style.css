@@ -12,3 +12,10 @@
 .marginFromTop {
     margin-top: 1em;
 }
+
+.loginPageFont {
+    font-family: 'Amatic SC', cursive;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-size: 4em;
+    /* color: white; */
+  }
