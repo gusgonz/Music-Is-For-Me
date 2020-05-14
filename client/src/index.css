@@ -16,6 +16,11 @@ h1 {
   /* color: white; */
 }
 
+.whiteText {
+  color: white;
+  margin-top: 30px;
+}
+
 html,
 body {
   margin: 0;
