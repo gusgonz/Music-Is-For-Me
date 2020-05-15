@@ -8,6 +8,7 @@ import API from "../../utils/API";
 import ConnectToSpotify from "../ConnectToSpotify";
 import UserInfoForm from "../UserInfoForm"
 import UserContext from "../../utils/UserContext";
+import Row from 'react-bootstrap/Row'
 
 import "./style.css";
 
@@ -61,7 +62,7 @@ function Profile() {
     </p>
 
           </Media.Body>
-          <Button variant="danger" onClick={editUserProfile}>Edit Profile</Button>
+          <Button variant="success" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
         {userState.currUser.has_spotify? "":<ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />}
         
