@@ -5,7 +5,7 @@ import API from "../../utils/API";
 const authEndpoint = 'https://accounts.spotify.com/authorize?';
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "93f3e7a8e86a42458d76a49b88d88648";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://music-is-for-me.herokuapp.com/";
 const scopes = ["user-read-private", "user-read-email"];
 
 // Get the hash of the url
@@ -54,9 +54,9 @@ function ConnectToSpotify(props) {
     }, []);
 
     return (
-        <div style={{backgroundColor: "green", width:"200px", marginTop: "5px"}}>
+        <div style={{ backgroundColor: "green", width: "200px", marginTop: "5px" }}>
             {!spotifyToken && (
-                <a style={{color:"white"}}
+                <a style={{ color: "white" }}
                     className="btn btn--loginApp-link"
                     href={`${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`}
                 >
