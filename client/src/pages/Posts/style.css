@@ -9,3 +9,7 @@
 .mainText {
     font-size: 2.6em;
 }
+
+.postWhiteText {
+    background-color: white;
+}
