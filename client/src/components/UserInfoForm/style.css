@@ -23,4 +23,6 @@
 
 .formLabelTextMargins {
     margin-top: .6em;
+    color: white;
+    text-align: left;
 }

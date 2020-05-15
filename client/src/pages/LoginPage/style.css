@@ -1,12 +1,29 @@
+.userInfoFormContainer {
+    margin-top: 40px;
+    padding-top: 15px;
+    background-color: rgba(33, 36, 53, 0.7);
+    border-radius: 20px;
+    background-color: rgba(33, 36, 53, 0.7);
+    color: rgb(207, 207, 207);
+    width: 30%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.formLabelTextMarginsLoginPage {
+    margin-top: .6em;
+    color: white;
+}
+
 .DescriptionOfPostText {
     color: white;
     margin: 0;
 }
 
 .widthOfLoginForm {
-    width: 20%;
-    align-items: center;
-    display: inline;
+    width: 100%;
+    /* align-items: center;
+    display: inline; */
 }
 
 .marginFromTop {
