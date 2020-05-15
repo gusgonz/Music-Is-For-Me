@@ -6,19 +6,19 @@
 }
 
 .paddingForLogoToPushStuffRight {
-    padding-right: 20px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left:10px ;
 }
 
 .alignLoginLogoutRight {
-    /* margin: 0;
-    top: 0;
-    right: 60;
-    bottom:20; */
-    /* margin-left: auto; */
-    /* left: auto; */
-    /* position: fixed; */  
-    /* margin-left: 100%; */
-    /* margin-left: 28em; */
     color: white;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Amatic SC', cursive; 
 }
+
+.navBarh3Tags{
+    margin: 10px;
+}
+               
+

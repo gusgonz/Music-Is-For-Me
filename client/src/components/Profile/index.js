@@ -41,14 +41,14 @@ function Profile() {
     return (
       <Container style={{ paddingBottom: 37 }}>
         <Media>
-          <img
-            width={200}
-            height={200}
-            className="mr-3"
-            src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url : "https://via.placeholder.com/200"}
-            alt="Generic placeholder"
-          />
           <Media.Body>
+            <img
+              width={200}
+              height={200}
+              className="mr-3"
+              src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url : "https://via.placeholder.com/200"}
+              alt="Generic placeholder"
+            />
 
             <h2 className="profileNameText alignLeft">{userState.currUser.firstName} {userState.currUser.lastName}</h2>
 
@@ -59,9 +59,9 @@ function Profile() {
             <p className="bioText alignLeft">
               {userState.currUser.bio ? userState.currUser.bio : "this user has not created a bio yet."}
             </p>
+            <Button variant="success" onClick={editUserProfile}>Edit Profile</Button>
 
           </Media.Body>
-          <Button variant="success" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
         {userState.currUser.has_spotify ? "" : <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />}
 
