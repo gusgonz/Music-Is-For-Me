@@ -50,13 +50,13 @@ function Profile() {
           />
           <Media.Body>
 
-            <h2 className="amaticGoogleFont alignLeft">{userState.currUser.firstName} {userState.currUser.lastName}</h2>
+            <h2 className="profileNameText alignLeft">{userState.currUser.firstName} {userState.currUser.lastName}</h2>
 
             <Card.Text>
-              <p className="alignLeft">{userState.currUser.email}</p>
+              <p className="emailText alignLeft">{userState.currUser.email}</p>
             </Card.Text>
 
-            <p className="alignLeft">
+            <p className="bioText alignLeft">
               {userState.currUser.bio ? userState.currUser.bio : "this user has not created a bio yet."}
     </p>
 
