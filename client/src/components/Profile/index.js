@@ -40,16 +40,16 @@ function Profile() {
       return (<UserInfoForm editState={setEditProfile} />)
     }
     return (
-      <Container style = {{paddingBottom : 37 }}>
+      <Container style={{ paddingBottom: 37 }}>
         <Media>
-          <img
-            width={200}
-            height={200}
-            className="mr-3"
-            src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url:"https://via.placeholder.com/200"}
-            alt="Generic placeholder"
-          />
           <Media.Body>
+            <img
+              width={200}
+              height={200}
+              className="mr-3"
+              src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url : "https://via.placeholder.com/200"}
+              alt="Generic placeholder"
+            />
 
             <h2 className="profileNameText alignLeft">{userState.currUser.firstName} {userState.currUser.lastName}</h2>
 
@@ -59,13 +59,13 @@ function Profile() {
 
             <p className="bioText alignLeft">
               {userState.currUser.bio ? userState.currUser.bio : "this user has not created a bio yet."}
-    </p>
+            </p>
+            <Button variant="success" onClick={editUserProfile}>Edit Profile</Button>
 
           </Media.Body>
-          <Button variant="success" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
-        {userState.currUser.has_spotify? "":<ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />}
-        
+        {userState.currUser.has_spotify ? "" : <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />}
+
 
       </Container >
     )
@@ -76,25 +76,25 @@ function Profile() {
 
   //if viewing someone elses profile
   return (
-    <Container>
+    <Container style={{ paddingBottom: 37 }}>
       <Media>
-        <img
-          width={200}
-          height={200}
-          className="mr-3"
-          src={currProfile.has_spotify ? currProfile.spotify_data.image_url:"https://via.placeholder.com/200"}
-          alt="Generic placeholder"
-        />
         <Media.Body>
-         <h2 className="amaticGoogleFont alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
+          <img
+            width={200}
+            height={200}
+            className="mr-3"
+            src={currProfile.has_spotify ? currProfile.spotify_data.image_url : "https://via.placeholder.com/200"}
+            alt="Generic placeholder"
+          />
+          <h2 className="profileNameText alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
 
           <Card.Text>
-            <p className="alignLeft">{currProfile.email}</p>
+            <p className="emailText alignLeft">{currProfile.email}</p>
           </Card.Text>
 
-          <p className="alignLeft">
+          <p className="bioText alignLeft">
             {currProfile.bio ? currProfile.bio : "this user has not created a bio yet."}
-    </p>
+          </p>
         </Media.Body>
       </Media>
 
