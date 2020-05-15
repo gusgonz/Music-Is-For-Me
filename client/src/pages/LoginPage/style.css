@@ -1,6 +1,6 @@
 .userInfoFormContainer {
     margin-top: 40px;
-    padding-top: 15px;
+    padding: 0;
     background-color: rgba(33, 36, 53, 0.7);
     border-radius: 20px;
     background-color: rgba(33, 36, 53, 0.7);
@@ -8,6 +8,10 @@
     width: 30%;
     display: inline-flex;
     justify-content: center;
+}
+
+.loginPageSubmitButton {
+    margin-bottom: 1em;
 }
 
 .formLabelTextMarginsLoginPage {
@@ -22,9 +26,10 @@
 
 .widthOfLoginForm {
     width: 100%;
-    /* align-items: center;
-    display: inline; */
+    align-items: center;
+    /* display: inline; */
 }
+
 
 .marginFromTop {
     margin-top: 1em;
