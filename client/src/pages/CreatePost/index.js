@@ -122,7 +122,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
-          <Button className="submitBtn" variant="danger" type="submit" onClick={createPostInfo}>Submit</Button>{' '}</>
+          <Button className="submitBtn" variant="success" type="submit" onClick={createPostInfo}>Submit</Button>{' '}</>
       </div>
     </Container>
   )

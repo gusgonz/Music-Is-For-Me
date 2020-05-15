@@ -43,7 +43,8 @@ function UserInfoForm(props) {
         )
     }
     return (
-        <Form className="widthOfLoginFormUserInfoForm userInfoFormContainer">
+        <div className="userInfoFormContainer">
+        <Form className="widthOfLoginFormUserInfoForm">
             <Form.Row>
                 <Col>
                     <Form.Label>First Name</Form.Label>
@@ -60,8 +61,9 @@ function UserInfoForm(props) {
                     <Form.Control as="textarea" rows="3" placeholder={usr.bio} ref={bio}/>
                 </Col>
             </Form.Row>
-            <Button onClick={saveUserInfo}>Save Changes</Button>
+            <Button className="marginSubmitButton" variant="success" onClick={saveUserInfo}>Save Changes</Button>
         </Form>
+        </div>
     );
 }
 
