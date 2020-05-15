@@ -11,7 +11,7 @@ function Footer() {
                 placeholder="Email us with any suggestions."
                 aria-label="Email us with any suggestions."
                 aria-describedby="basic-addon2"
-                className="widthFormControlInFooter"
+                className="marginLeft widthFormControlInFooter"
             />
             <img className="redSendArrowIcon" src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow" />
         </div>
