@@ -1,11 +1,18 @@
 .alignLeft {
+<<<<<<< HEAD
     text-align: center;
+=======
+    text-align: left;
+>>>>>>> fc46f8f9e75a2033e0168bc3d805d95f3bcc3852
     color: white;
 }
 
 .bioText{
     color: white;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> fc46f8f9e75a2033e0168bc3d805d95f3bcc3852
     
 }
 
@@ -23,6 +30,7 @@
     padding: 0;
     margin-top: -2;
 }
+<<<<<<< HEAD
 .media-body{
     margin-top: 30px;
 }
@@ -31,4 +39,9 @@
 }
 img.mr-3{
     margin-left: 16px;
+=======
+
+.bnt{
+    position: relative;
+>>>>>>> fc46f8f9e75a2033e0168bc3d805d95f3bcc3852
 }

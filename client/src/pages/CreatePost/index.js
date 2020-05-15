@@ -65,7 +65,7 @@ function CreatePost() {
 
   if (!userState.currUser._id) {
     return <div>
-      <h2 className="whiteText amaticGoogleFont">You Must Be Logged In To View This Page</h2>
+      <h2 className="container whiteText amaticGoogleFont">You Must Be Logged In To View This Page</h2>
     </div>
   }
 
@@ -122,7 +122,7 @@ function CreatePost() {
               aria-describedby="basic-addon2"
             />
           </InputGroup>
-          <Button className="submitBtn" variant="danger" type="submit" onClick={createPostInfo}>Submit</Button>{' '}</>
+          <Button className="submitBtn" variant="success" type="submit" onClick={createPostInfo}>Submit</Button>{' '}</>
       </div>
     </Container>
   )

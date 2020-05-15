@@ -41,25 +41,27 @@ function Login() {
   else{
 
     return (
-      <div className="loginContainer">
+      <div className="userInfoFormContainer">
+      <div>
         <Form className="marginFromTop">
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label className="DescriptionOfPostText loginPageFont">Email address</Form.Label> <br/>
+          <Form.Group className="parentOfTextEntry" controlId="formBasicEmail">
+            <Form.Label className="formLabelTextMarginsLoginPage DescriptionOfPostText loginPageFont">Email address</Form.Label> <br/>
             <Form.Control className="widthOfLoginForm" type="email" placeholder="Enter email" ref={email} />
             
           </Form.Group>
       
           <Form.Group controlId="formBasicPassword">
-            <Form.Label className="DescriptionOfPostText loginPageFont">Password</Form.Label> <br/>
+            <Form.Label className="formLabelTextMarginsLoginPage DescriptionOfPostText loginPageFont">Password</Form.Label> <br/>
             <Form.Control className="widthOfLoginForm" type="password" placeholder="Password" ref={password} />
           </Form.Group>
-          <Button variant="danger" type="submit" onClick={GetLoginInfo}>
+          <Button className="loginPageSubmitButton" variant="success" type="submit" onClick={GetLoginInfo}>
             Submit
       </Button>
-      <Alert variant="danger" show={loginState.loginFailed} onClose={() => setLoginState({loginFailed: false})} dismissible>
+      <Alert className="loginPageSubmitButton" variant="danger" show={loginState.loginFailed} onClose={() => setLoginState({loginFailed: false})} dismissible>
         The email and password you entered do not match what is in our system. Please try again.
       </Alert>
         </Form>
+      </div>
       </div>
       )
     }
