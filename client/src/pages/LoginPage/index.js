@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useState } from 'react';
+import React, { useRef, useContext, useState, useEffect } from 'react';
 import "./style.css";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -33,6 +33,7 @@ function Login() {
     });
   }
 
+  
 
   if(loginState.loggedIn){
     return <Redirect to={"/profile/"+userState.currUser._id}></Redirect>
