@@ -28,7 +28,15 @@ body {
   /* font-family: sans-serif; */
   height: 100%;
   position: relative;
-  background-image: linear-gradient(to bottom right, rgb(140, 0, 255), rgb(0, 255, 42));
+  /* background-image: linear-gradient(to bottom, rgb(140, 0, 255), rgb(0, 255, 42)); */
+  /* background-image: radial-gradient(to bottom, rgb(140, 0, 255),rgb(169, 63, 255)); */
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, #8c00ff 35%, #00ff2a 100%); */
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+  /* background-repeat: no-repeat; */
+  /* background-size: auto; */
+  /* background-size: cover; */
 }
 
 p {

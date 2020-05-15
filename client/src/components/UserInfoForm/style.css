@@ -6,3 +6,9 @@
     background-color: rgba(33, 36, 53, 0.7);
     color: rgb(207, 207, 207);
 }
+
+.widthOfLoginFormUserInfoForm {
+    width: 20%;
+    align-items: center;
+    display: inline;
+}

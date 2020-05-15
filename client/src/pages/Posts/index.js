@@ -60,7 +60,7 @@ function Posts() {
     return (
         <Container>
             <Jumbotron className="postJumbo">
-                <h2 className="amaticGoogleFont">Find your next music student/teacher</h2>
+                <h2 className="mainText">Find your next music student/teacher</h2>
             </Jumbotron>
             <Row name="SearchRow" className="justify-content-center">
             <Form>
