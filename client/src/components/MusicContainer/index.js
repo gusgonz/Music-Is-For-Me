@@ -10,26 +10,24 @@ import "./style.css"
 
 
 function MusicContainer(props) {
-console.log(props.author_id);
-let renderStyle={};
-if(props.ownPost){
- renderStyle= {
-    // border: "2px solid blue",
-    backgroundColor: 'rgba(255,255,255,0.5)',
-    color:"black"
+  console.log(props.author_id);
+  let renderStyle = {};
+  if (props.ownPost) {
+    renderStyle = {
+      backgroundColor: 'rgba(255,255,255,0.5)',
+      color: "black"
+    }
   }
-}
-else{
-renderStyle={
-  // border: "2px solid blue",
-  backgroundColor: "white",
-  color:"black",
-  marginTop: 10
-}
-}
+  else {
+    renderStyle = {
+      backgroundColor: "white",
+      color: "black",
+      marginTop: 10
+    }
+  }
   return (
 
-    <Media  className="rounded" style={renderStyle}>
+    <Media className="rounded" style={renderStyle}>
       <Media.Body>
         <Row>
           <Col>
