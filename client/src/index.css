@@ -60,6 +60,7 @@ p {
   border-radius: 20px;
   background-color: rgba(33, 36, 53, 0.7);
   color: rgb(207, 207, 207);
+  width: 100%;
 }
 
 .permanentMarkerFont {
