@@ -16,8 +16,8 @@ function Footer() {
             <a href="mailto:someone@yoursite.com"><img className="redSendArrowIcon" src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow" /></a>
         </div>
         <div className="ml-md-auto">
-            <img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width='25px' height='25px' />
-            <img className="twitterFacebookMargins" src={require('../../assets/icons/facebook.svg')} alt="Facebook Icon" />
+            <a href=""><img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width='25px' height='25px' /></a>
+            <a href=""><img className="twitterFacebookMargins" src={require('../../assets/icons/facebook.svg')} alt="Facebook Icon" /></a>
         </div>
         </Navbar >
     )
