@@ -12,6 +12,7 @@
   height: 50px;
   background-color: black;
   margin-top: 0px;  
+  height: 5em;
 }
 
 .blackBackground {  
@@ -34,6 +35,16 @@
   margin-bottom: 0%;
 }
 
+.redSendArrowIcon {
+  margin-left: .5em;
+  margin-bottom: .5em;
+}
 
+.twitterFacebookMargins {
+  margin-left: .5em;
+  margin-right: .5em;
+}
 
-
+.marginLeft {
+  margin-left: .5em;
+}
