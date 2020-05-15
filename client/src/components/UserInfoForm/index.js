@@ -43,25 +43,27 @@ function UserInfoForm(props) {
         )
     }
     return (
-        <Form className="widthOfLoginFormUserInfoForm userInfoFormContainer">
+        <div className="userInfoFormContainer">
+        <Form className="widthOfLoginFormUserInfoForm">
             <Form.Row>
                 <Col>
-                    <Form.Label>First Name</Form.Label>
+                    <Form.Label className="formLabelTextMargins">First Name</Form.Label>
                     <Form.Control placeholder={usr.firstName} ref={firstName} />
                 
-                    <Form.Label>Last Name</Form.Label>
+                    <Form.Label className="formLabelTextMargins">Last Name</Form.Label>
                     <Form.Control placeholder={usr.lastName} ref={lastName} />
                 </Col>
             </Form.Row>
 
             <Form.Row>
                 <Col>
-                    <Form.Label>Bio</Form.Label>
+                    <Form.Label className="formLabelTextMargins">Bio</Form.Label>
                     <Form.Control as="textarea" rows="3" placeholder={usr.bio} ref={bio}/>
                 </Col>
             </Form.Row>
-            <Button onClick={saveUserInfo}>Save Changes</Button>
+            <Button className="marginSubmitButton" variant="success" onClick={saveUserInfo}>Save Changes</Button>
         </Form>
+        </div>
     );
 }
 
