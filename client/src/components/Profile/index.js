@@ -76,23 +76,23 @@ function Profile() {
 
   //if viewing someone elses profile
   return (
-    <Container>
+    <Container style={{ paddingBottom: 37 }}>
       <Media>
-        <img
-          width={200}
-          height={200}
-          className="mr-3"
-          src={currProfile.has_spotify ? currProfile.spotify_data.image_url : "https://via.placeholder.com/200"}
-          alt="Generic placeholder"
-        />
         <Media.Body>
-          <h2 className="amaticGoogleFont alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
+          <img
+            width={200}
+            height={200}
+            className="mr-3"
+            src={currProfile.has_spotify ? currProfile.spotify_data.image_url : "https://via.placeholder.com/200"}
+            alt="Generic placeholder"
+          />
+          <h2 className="profileNameText alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
 
           <Card.Text>
-            <p className="alignLeft">{currProfile.email}</p>
+            <p className="emailText alignLeft">{currProfile.email}</p>
           </Card.Text>
 
-          <p className="alignLeft">
+          <p className="bioText alignLeft">
             {currProfile.bio ? currProfile.bio : "this user has not created a bio yet."}
           </p>
         </Media.Body>
