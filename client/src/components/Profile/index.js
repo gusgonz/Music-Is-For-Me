@@ -8,6 +8,7 @@ import API from "../../utils/API";
 import ConnectToSpotify from "../ConnectToSpotify";
 import UserInfoForm from "../UserInfoForm"
 import UserContext from "../../utils/UserContext";
+import Row from 'react-bootstrap/Row'
 
 import "./style.css";
 
@@ -39,13 +40,13 @@ function Profile() {
       return (<UserInfoForm editState={setEditProfile} />)
     }
     return (
-      <Container style={{ paddingBottom: 37 }}>
+      <Container style = {{paddingBottom : 37 }}>
         <Media>
           <img
             width={200}
             height={200}
             className="mr-3"
-            src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url : "https://via.placeholder.com/200"}
+            src={userState.currUser.has_spotify ? userState.currUser.spotify_data.image_url:"https://via.placeholder.com/200"}
             alt="Generic placeholder"
           />
           <Media.Body>
@@ -58,17 +59,15 @@ function Profile() {
 
             <p className="bioText alignLeft">
               {userState.currUser.bio ? userState.currUser.bio : "this user has not created a bio yet."}
-            </p>
+    </p>
 
           </Media.Body>
           <Button variant="success" onClick={editUserProfile}>Edit Profile</Button>
         </Media>
-        {userState.currUser.has_spotify ? "" : <ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />}
-
+        {userState.currUser.has_spotify? "":<ConnectToSpotify userID={id} hasSpotify={userState.currUser.has_spotify} changeProfile={userState.setCurrUser} />}
+        
 
       </Container >
-
-
     )
   }
   else if (!userState.currUser._id) {
@@ -83,11 +82,11 @@ function Profile() {
           width={200}
           height={200}
           className="mr-3"
-          src={currProfile.has_spotify ? currProfile.spotify_data.image_url : "https://via.placeholder.com/200"}
+          src={currProfile.has_spotify ? currProfile.spotify_data.image_url:"https://via.placeholder.com/200"}
           alt="Generic placeholder"
         />
         <Media.Body>
-          <h2 className="amaticGoogleFont alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
+         <h2 className="amaticGoogleFont alignLeft"> {currProfile.firstName} {currProfile.lastName}</h2>
 
           <Card.Text>
             <p className="alignLeft">{currProfile.email}</p>
@@ -95,14 +94,12 @@ function Profile() {
 
           <p className="alignLeft">
             {currProfile.bio ? currProfile.bio : "this user has not created a bio yet."}
-          </p>
+    </p>
         </Media.Body>
       </Media>
 
     </Container >
   );
-
-
 }
 
 
