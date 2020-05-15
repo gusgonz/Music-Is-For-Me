@@ -13,7 +13,7 @@ function Footer() {
                 aria-describedby="basic-addon2"
                 className="marginLeft widthFormControlInFooter"
             />
-            <img className="redSendArrowIcon" src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow" />
+            <a href="mailto:someone@yoursite.com"><img className="redSendArrowIcon" src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow" /></a>
         </div>
         <div className="ml-md-auto">
             <img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width='25px' height='25px' />
