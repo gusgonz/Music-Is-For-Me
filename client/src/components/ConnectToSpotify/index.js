@@ -54,9 +54,9 @@ function ConnectToSpotify(props) {
     }, []);
 
     return (
-        <div>
+        <div style={{backgroundColor: "green", width:"200px", marginTop: "5px"}}>
             {!spotifyToken && (
-                <a
+                <a style={{color:"white"}}
                     className="btn btn--loginApp-link"
                     href={`${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`}
                 >

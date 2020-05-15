@@ -4,21 +4,15 @@ import UserContext from "../../utils/UserContext";
 import API from '../../utils/API';
 import './style.css';
 
-// const navStyle = {
-//   color: 'white',
-//   marginLeft: "10px",
-//   marginRight: "10px"
-// }
-
-
-
 function Nav() {
   const userState = useContext(UserContext);
-  const profileLink = `/profile/${userState.currUser._id}`
 
   function handleLogout() {
-    API.logout();
     userState.setCurrUser({});
+    API.logout().then(()=>{
+      window.location.reload(false);
+    });
+    
   }
 
   if (userState.currUser._id) {
