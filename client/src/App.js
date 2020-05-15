@@ -23,6 +23,7 @@ function App() {
           <Route path="/posts" component={Posts} />
           <Route path="/" component={Login}/>
         </Switch>
+        <br/><br/><br/><br/><br/><br/>
       <Footer></Footer>
         </UserContext.Provider>
       </div>

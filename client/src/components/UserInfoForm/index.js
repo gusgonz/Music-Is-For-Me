@@ -43,13 +43,12 @@ function UserInfoForm(props) {
         )
     }
     return (
-        <Form className="userInfoFormContainer">
+        <Form className="widthOfLoginFormUserInfoForm userInfoFormContainer">
             <Form.Row>
                 <Col>
                     <Form.Label>First Name</Form.Label>
                     <Form.Control placeholder={usr.firstName} ref={firstName} />
-                </Col>
-                <Col>
+                
                     <Form.Label>Last Name</Form.Label>
                     <Form.Control placeholder={usr.lastName} ref={lastName} />
                 </Col>
