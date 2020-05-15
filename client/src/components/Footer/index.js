@@ -20,6 +20,8 @@ function Footer() {
         <Navbar expand="sm" fixed="bottom" className="blackFooter">
             <Container className="blackBackground">
                 {/* <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Email Us</Navbar.Brand> */}
+                <Row>
+                <div>
                 <FormControl
       placeholder="Email us with any suggestions."
       aria-label="Email us with any suggestions."
@@ -27,10 +29,12 @@ function Footer() {
       className="widthFormControlInFooter"
     />
                 {/* <Navbar.Brand bg="light" variant="light" href="#" style={navStyle}>Navbar</Navbar.Brand> */}
-            </Container>
     <img src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow"/>
+                </div>
     <img src={require('../../assets/icons/facebook.svg')} alt="Facebook Icon"/>
-    <img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width='5%' height='5%'/>
+    <img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width="24px" height="24px"/>
+                </Row>
+            </Container>
         </Navbar>
     )
 }
