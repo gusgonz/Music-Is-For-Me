@@ -39,7 +39,7 @@ function Profile() {
       return (<UserInfoForm editState={setEditProfile} />)
     }
     return (
-      <Container>
+      <Container style = {{paddingBottom : 37 }}>
         <Media>
           <img
             width={200}
