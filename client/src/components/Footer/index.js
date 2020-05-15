@@ -13,11 +13,11 @@ function Footer() {
                 aria-describedby="basic-addon2"
                 className="widthFormControlInFooter"
             />
-            <img src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow" />
+            <img className="redSendArrowIcon" src={require('../../assets/icons/redSendIcon.png')} alt="Send email arrow" />
         </div>
         <div className="ml-md-auto">
             <img src={require('../../assets/icons/twitter.svg')} alt="Twitter Icon" width='25px' height='25px' />
-            <img src={require('../../assets/icons/facebook.svg')} alt="Facebook Icon" />
+            <img className="twitterFacebookMargins" src={require('../../assets/icons/facebook.svg')} alt="Facebook Icon" />
         </div>
         </Navbar >
     )
