@@ -20,7 +20,17 @@ Deployed application: https://music-is-for-me.herokuapp.com/
 *Need Text here*
 
 ## How-To
-*Need Text and Images here*
+To access the site, visit the link to the deployed application listen above. Once there, create a new account using the form displayed. Once complete, you will be redirected to your newly created profile page. Here you can view your information, edit your name and bio using the edit profile button, and link your spotify to your account using the button below your profile picture(this will require you to log in again once complete).
+![screenshot](./pictures/profile.png)
+
+If you would like to create a new post, click on the Create Post tab on the navbar. This will take you to a form that you can fill out with the details of your post. When you are finished, click the submit button and your post will be added to the database and you will be redirected to the posts page.
+![screenshot](./pictures/createPost.png)
+
+To view the posts page, click the Posts tab on the navbar. Here you will initially see a list of every post on the site. Use the dropdown selection to choose if you would like to view posts from teachers or students and use the text input to search for specific topics you wish to teach or learn. Clicking on a post creator's name will let you visit their profile page which will contain their email address if you wish to contact them about their listing. Posts that belong to you will be slightly more dim than posts made by other users.
+![screenshot](./pictures/posts.png)
+
+Gif of the entire process:
+![Alt Text](https://gyazo.com/bca8c163c5bfb041fa6013be1e1a874c)
 
 ## Credits
 *Need Text here*
