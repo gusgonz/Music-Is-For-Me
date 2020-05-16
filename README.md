@@ -7,6 +7,7 @@ Deployed application: https://music-is-for-me.herokuapp.com/
 * [Introduction](#Introduction)
 * [Installation](#Installation)
 * [How-To](#How-To)
+* [Demo](#Demo)
 * [Credits](#Credits)
 * [License](#License)
 
@@ -17,7 +18,17 @@ Music is for me is an app that connects music students to teachers, coaches, and
 
 
 ## Installation
-*Need Text here*
+After cloning or forking, make sure to run npm i in the project directory. You will need to setup a Spotify Developr Account to use the Spotify Web API functionality within the app. 
+
+To setup Spotify API:
+1. Go to https://developer.spotify.com/dashboard/login. Make an account and create a new app.
+2. After creation, edit your app settings and add the redirect  URI you want to redirect to upon successful authorization by Spotify. 
+3. Make sure to update the redirect URI in the client/components/ConnectToSpotify/index.js file to the redirect URI you added to your app on the Spotify dashboard.
+4. Find the Client ID associated with your app and replace the one in the client/components/ConnectToSpotify/index.js file with your Client ID.
+
+With that it should be working!
+
+For more information about Spotify's Web API visit: https://developer.spotify.com/documentation/web-api/
 
 ## How-To
 To access the site, visit the link to the deployed application listen above. Once there, create a new account using the form displayed. Once complete, you will be redirected to your newly created profile page. Here you can view your information, edit your name and bio using the edit profile button, and link your spotify to your account using the button below your profile picture(this will require you to log in again once complete).
@@ -29,8 +40,11 @@ If you would like to create a new post, click on the Create Post tab on the navb
 To view the posts page, click the Posts tab on the navbar. Here you will initially see a list of every post on the site. Use the dropdown selection to choose if you would like to view posts from teachers or students and use the text input to search for specific topics you wish to teach or learn. Clicking on a post creator's name will let you visit their profile page which will contain their email address if you wish to contact them about their listing. Posts that belong to you will be slightly more dim than posts made by other users.
 ![screenshot](./pictures/posts.png)
 
-Gif of the entire process:
+## Demo
+
+Demo of the entire process:
 https://gyazo.com/bca8c163c5bfb041fa6013be1e1a874c
+
 
 ## Credits
 - Garrett Reichman
@@ -42,7 +56,7 @@ https://gyazo.com/bca8c163c5bfb041fa6013be1e1a874c
 - Gus Gonzalez
     * Github - https://github.com/gusgonz
 
-
+Spotify Web API
 
 ## License
 
