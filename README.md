@@ -33,7 +33,16 @@ Gif of the entire process:
 https://gyazo.com/bca8c163c5bfb041fa6013be1e1a874c
 
 ## Credits
-*Need Text here*
+- Garrett Reichman
+    * Github - https://github.com/GReichman
+- Austin Smith
+    * GitHub - https://github.com/Austin-Smith-999
+- Rojel C Perez Vez
+    * Github - https://github.com/rojel83
+- Gus Gonzalez
+    * Github - https://github.com/gusgonz
+
+
 
 ## License
 
