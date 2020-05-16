@@ -13,7 +13,7 @@ Deployed application: https://music-is-for-me.herokuapp.com/
 ---
 
 ## Introduction 
-*Music is for me is an app that connects music students to teachers, coaches, and mentors.  Users can either search for instructors or instructors can connect to new or existing students.  Through the use of Spotify and React Player, API users can identify favorite musical genres or specific songs that the student would like to utilize for musical instruction.*
+Music is for me is an app that connects music students to teachers, coaches, and mentors.  Users can either search for instructors or instructors can connect to new or existing students.  Through the use of Spotify and React Player, API users can identify favorite musical genres or specific songs that the student would like to utilize for musical instruction.
 
 
 ## Installation
