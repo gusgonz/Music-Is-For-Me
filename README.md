@@ -30,7 +30,7 @@ To view the posts page, click the Posts tab on the navbar. Here you will initial
 ![screenshot](./pictures/posts.png)
 
 Gif of the entire process:
-![Alt Text](./pictures/walkthrough.mp4)
+https://gyazo.com/bca8c163c5bfb041fa6013be1e1a874c
 
 ## Credits
 *Need Text here*
